@@ -1,0 +1,26 @@
+[alias]
+    top = rev-parse --show-toplevel
+    log = log --pretty=format:"%C(red)%h\\ %C(white)%s\\ %C(green)%ad\\ %C(blue)%an" --date=relative
+    who = !git config user.name && git config user.email
+    ls = ls-tree -r master --name-only
+[core]
+    editor = nvim
+[diff]
+    tool = nvim -d
+[init]
+    defaultBranch = master
+[merge]
+    tool = nvim
+[mergetool]
+    keepBackup = false
+[mergetool "nvim"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[pull]
+    ff = only
+[user]
+    name = Liam Butterworth
+    email = liambutterworth@randallreilly.com
+[web]
+    browser = firefox
+[credential "https://dev.azure.com"]
+    useHttpPath = true

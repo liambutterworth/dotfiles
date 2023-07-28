@@ -1,0 +1,93 @@
+{
+    "print": {
+        "prefix": ["p", "print"],
+        "description": "Print",
+        "body": "print(${1:$TM_SELECTED_TEXT})"
+    },
+
+    "require": {
+        "prefix": ["r", "require"],
+        "description": "Require",
+
+        "body": [
+            "require('${1:$TM_SELECTED_TEXT}')"
+        ]
+    },
+
+    "function": {
+        "prefix": ["fun", "function"],
+        "description": "Function",
+
+        "body": [
+            "function ${1:name}($2)",
+            "\t$TM_SELECTED_TEXT$3",
+            "end$0"
+        ]
+    },
+
+    "closure": {
+        "prefix": ["fn", "closure"],
+        "description": "Closure",
+
+        "body": [
+            "function($1)",
+            "\t$TM_SELECTED_TEXT$2",
+            "end"
+        ]
+    },
+
+    "for": {
+        "prefix": "for",
+        "description": "For loop",
+
+        "body": [
+            "for ${1:_, ${2:item}} in ${3:ipairs(${4:items})} do",
+            "\t$TM_SELECTED_TEXT$5",
+            "end$0"
+        ]
+    },
+
+    "while": {
+        "prefix": "while",
+        "description": "Whilte loop",
+
+        "body": [
+            "while ${1:index < ${2:20}} do",
+            "\t$3",
+            "end"
+        ]
+    },
+
+    "if": {
+        "prefix": "if",
+        "description": "Conditional statement",
+
+        "body": [
+            "if $1 then",
+            "\t$TM_SELECTED_TEXT$2",
+            "end$0"
+        ]
+    },
+
+    "then": {
+        "prefix": "then",
+        "description": "Expand then statement",
+
+        "body": [
+            "then",
+            "\t$TM_SELECTED_TEXT$1",
+            "end"
+        ]
+    },
+
+    "do": {
+        "prefix": "do",
+        "description": "Expand do statement",
+
+        "body": [
+            "do",
+            "\t$TM_SELECTED_TEXT$1",
+            "end"
+        ]
+    }
+}

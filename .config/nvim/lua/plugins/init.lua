@@ -12,7 +12,11 @@ local plugins = {
 local options = {
     ui = {
         border = 'single',
-    }
+    },
+
+    install = {
+        missing = false,
+    },
 }
 
 if not vim.loop.fs_stat(lazypath) then

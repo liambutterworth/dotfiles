@@ -9,16 +9,6 @@ local plugins = {
     require('plugins.treesitter'),
 }
 
-local options = {
-    ui = {
-        border = 'single',
-    },
-
-    install = {
-        missing = false,
-    },
-}
-
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
         'git',
@@ -32,4 +22,12 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup(plugins, options)
+require('lazy').setup('plugins', {
+    ui = {
+        border = 'single',
+    },
+
+    install = {
+        missing = false,
+    },
+})

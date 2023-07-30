@@ -1,0 +1,17 @@
+{
+    "snippet": {
+        "prefix": ["snip", "snippet"],
+        "description": "Create snippet",
+
+        "body": [
+            "\"${1:name}\": {",
+            "\t\"prefix\": \"${2:prefix}\",",
+            "\t\"description\": \"${3:description}\",",
+            "",
+            "\t\"body\": [",
+            "\t\t$4",
+            "\t]",
+            "}$0"
+        ]
+    }
+}

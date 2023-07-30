@@ -1,0 +1,71 @@
+{
+    "//": {
+        "prefix": "//",
+        "description": "Expand comment",
+
+        "body": [
+            "//",
+            "// $1",
+            "//"
+        ]
+    },
+
+    "log": {
+        "prefix": ["log"],
+        "body": "console.log(${1:$TM_SELECTED_TEXT})"
+    },
+
+    "for": {
+        "prefix": "for",
+        "description": "For loop",
+
+        "body": [
+            "for ($1) {",
+            "\t$TM_SELECTED_TEXT$2",
+            "}"
+        ]
+    },
+
+    "if": {
+        "prefix": "if",
+        "description": "Conditional statement",
+
+        "body": [
+            "if ($1) {",
+            "\t$TM_SELECTED_TEXT$2",
+            "}"
+        ]
+    },
+
+    "switch": {
+        "prefix": ["sw", "switch"],
+        "description": "Switch statement",
+
+        "body": [
+            "switch (${1:$TM_SELECTED_TEXT) {",
+            "\t$2",
+            "}"
+        ]
+    },
+
+    "case": {
+        "prefix": ["ca", "case"],
+        "description": "Case statement",
+
+        "body": [
+            "case $1:",
+            "\t$TM_SELECTED_TEXT$2",
+            "\tbreak;"
+        ]
+    },
+
+    "default": {
+        "prefix": ["de", "default"],
+        "description": "Default case statement",
+
+        "body": [
+            "default $1:",
+            "\t$TM_SELECTED_TEXT$2"
+        ]
+    }
+}

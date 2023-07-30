@@ -8,11 +8,16 @@ return {
     config = function()
         local luasnip = require('luasnip')
 
+        -- TODO these dont seem to be loading
+        require('luasnip.loaders.from_vscode').load({
+            paths = { vim.fn.stdpath('config') .. '/snippets' }
+        })
+
         vim.keymap.set({ 'i', 's' }, '<c-j>', function()
             if luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             end
-        end, { silent = true })
+        end)
 
         vim.keymap.set({ 'i', 's' }, '<c-l>', function()
             if luasnip.jumpable(-1) then

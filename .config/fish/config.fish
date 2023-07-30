@@ -1,20 +1,9 @@
 #
 # Fish Config
 #
-# :: Aliases
-# :: Bindings
 # :: Colors
 # :: Exports
 # :: Startup
-
-#
-# Bindings
-#
-
-bind -M insert \cf accept-autosuggestion
-bind -M insert \cx accept-autosuggestion execute
-bind -M insert \cp history-search-backward
-bind -M insert \cn history-search-forward
 
 #
 # Colors
@@ -72,16 +61,10 @@ set -x FZF_ALT_C_COMMAND "fd --type directory"
 set -x FZF_CTRL_T_COMMAND "rg --files --no-require-git"
 set -x FZF_DEFAULT_COMMAND "fd --type file --follow"
 set -x FZF_DEFAULT_OPTS "--color=$FZF_COLORS"
-set -x PASSWORD_STORE_DIR "$XDG_DATA_HOME/pass"
 
 #
 # Startup
 #
-
-fish_ssh_agent
-
-fish_add_path $HOME/.local/bin
-fish_add_path /usr/local/sbin
 
 if test -e $XDG_CONFIG_HOME/fish/profile.fish
     source $XDG_CONFIG_HOME/fish/profile.fish

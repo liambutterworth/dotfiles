@@ -21,5 +21,3 @@ end
 function GetTabLine()
     return tabline:get()
 end
-
-vim.cmd('colorscheme custom')

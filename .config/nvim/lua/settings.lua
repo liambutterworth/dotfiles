@@ -1,14 +1,14 @@
 vim.opt.cmdheight = 0
 vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.expandtab = true
-vim.opt.fillchars = { vert = '│', eob = ' ' }
+vim.opt.fillchars = { vert = '│', eob = ' ', stl = ' ' }
 vim.opt.hidden = true
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.joinspaces = false
 vim.opt.lazyredraw = true
 vim.opt.list = true
-vim.opt.laststatus = 3
+vim.opt.laststatus = 2
 vim.opt.listchars = { trail = '·', tab = '│ ' }
 vim.opt.mouse = 'n'
 vim.opt.number = true

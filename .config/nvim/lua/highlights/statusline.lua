@@ -1,0 +1,18 @@
+return {
+    StatusLine = { ctermbg='none', ctermfg='none' },
+    StatusLineClean = { ctermbg='none', ctermfg='green', bold=true },
+    StatusLineDirty = { ctermbg='none', ctermfg='yellow' },
+    StatusLineHasErrors = { ctermbg='none', ctermfg='red', bold=true },
+    StatusLineHasWarnings = { ctermbg='none', ctermfg='yellow', bold=true },
+    StatusLineHasInformation = { ctermbg='none', ctermfg='blue', bold=true },
+    StatusLineIcon = { ctermbg='none', ctermfg='white', bold=true },
+    StatusLineOperator = { ctermbg='none', ctermfg='blue', bold=true },
+    StatusLineNormal = { ctermbg='black', ctermfg='none' },
+    StatusLineNumber = { ctermbg='none', ctermfg='magenta', bold=true },
+    StatusLineInactive = { ctermbg='white', ctermfg='black', bold=true },
+    StatusLineNC = { ctermbg='black', ctermfg='none' },
+    StatusLineModified = { ctermbg='yellow', ctermfg='black' },
+    StatusLineUnmodified = { ctermbg='green', ctermfg='black' },
+    StatusLineReadOnly = { ctermbg='red', ctermfg='black' },
+    StatusLineSeparator = { ctermbg='none', ctermfg='none', bold=true },
+}

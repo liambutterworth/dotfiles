@@ -1,7 +1,7 @@
 return {
     'nvim-treesitter/nvim-treesitter',
 
-    cmd = 'TSUpdate',
+    build = ':TSUpdate',
 
     dependencies = {
         'joosepalviste/nvim-ts-context-commentstring',

@@ -8,16 +8,6 @@
 # :: Startup
 
 #
-# Aliases
-#
-
-alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME $argv"
-alias fuck="sudo !!"
-alias ls="ls --color=always --group-directories-first"
-alias ll="ls -Ahlv"
-alias tree="tree --dirsfirst -I 'node_modules|plugged|vendor'"
-
-#
 # Bindings
 #
 

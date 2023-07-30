@@ -20,6 +20,7 @@ vim.keymap.set('n', 'c#', '#``cgN')
 vim.keymap.set('n', 'd*', '*``dgn')
 vim.keymap.set('n', 'd#', '#``dgN')
 vim.keymap.set('n', '<bs>', '<c-^>')
+vim.keymap.set('n', '<c-w><bs>', '<cmd>bwipe<cr>')
 
 --
 -- Leader

@@ -125,6 +125,7 @@ highlight('TelescopeSelectionCaret', { bg='none', fg='magenta', bold=true })
 --
 
 highlight('StatusLine', { bg='none', fg='none' })
+highlight('StatusLineNC', { bg='none', fg='white' })
 highlight('StatusLineHasErrors', { bg='none', fg='red', bold=true })
 highlight('StatusLineHasInformation', { bg='none', fg='blue', bold=true })
 highlight('StatusLineHasWarnings', { bg='none', fg='yellow', bold=true })

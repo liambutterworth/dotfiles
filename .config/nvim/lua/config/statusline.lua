@@ -11,6 +11,8 @@ end
 function GetStatusLineForBuffer(buffer)
     local statusline = {}
 
+    table.insert(statusline, '%#StatusLine#')
+
     if buffer ~= vim.fn.bufnr('%') then
         table.insert(statusline, '%#StatusLineInactive#')
     elseif vim.bo[buffer].readonly then

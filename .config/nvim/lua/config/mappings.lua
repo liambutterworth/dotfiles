@@ -19,12 +19,12 @@ vim.keymap.set('n', 'c*', '*``cgn')
 vim.keymap.set('n', 'c#', '#``cgN')
 vim.keymap.set('n', 'd*', '*``dgn')
 vim.keymap.set('n', 'd#', '#``dgN')
+vim.keymap.set('n', '<bs>', '<c-^>')
 
 --
 -- Leader
 --
 
-vim.keymap.set('n', '<leader><bs>', '<c-^>')
 vim.keymap.set('n', '<leader>h', '<c-w>h')
 vim.keymap.set('n', '<leader>j', '<c-w>j')
 vim.keymap.set('n', '<leader>k', '<c-w>k')

@@ -1,3 +1,7 @@
+--
+-- Statusline
+--
+
 vim.o.statusline = '%!v:lua.GetStatusLine()'
 
 function GetStatusLine()

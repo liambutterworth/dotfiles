@@ -1,3 +1,19 @@
+--
+-- Settings
+--
+-- :: Global
+-- :: Options
+
+--
+-- Global
+--
+
+vim.g.mapleader = ' '
+
+--
+-- Options
+--
+
 vim.opt.cmdheight = 0
 vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.expandtab = true

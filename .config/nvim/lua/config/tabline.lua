@@ -1,3 +1,7 @@
+--
+-- Tabline
+--
+
 vim.o.tabline = '%!v:lua.GetTabLine()'
 
 function GetTabLine()

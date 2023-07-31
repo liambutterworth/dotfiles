@@ -6,35 +6,34 @@ return {
     build = 'make install_jsregexp',
 
     config = function()
-        local luasnip = require('luasnip')
+        local ls = require('luasnip')
 
-        -- TODO these dont seem to be loading
-        require('luasnip.loaders.from_vscode').load({
-            paths = { vim.fn.stdpath('config') .. '/snippets' }
+        require('luasnip.loaders.from_lua').lazy_load({
+            paths = '~/.config/nvim/lua/snippets',
         })
 
         vim.keymap.set({ 'i', 's' }, '<c-j>', function()
-            if luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
+            if ls.expand_or_jumpable() then
+                ls.expand_or_jump()
             end
-        end)
+        end, { silent = true })
 
         vim.keymap.set({ 'i', 's' }, '<c-l>', function()
-            if luasnip.jumpable(-1) then
-                luasnip.jump(-1)
+            if ls.jumpable(-1) then
+                ls.jump(-1)
             end
         end, { silent = true })
 
         vim.keymap.set('i', '<c-p>', function()
-            if luasnip.choice_active() then
-                luasnip.change_choice(-1)
+            if ls.choice_active() then
+                ls.change_choice(-1)
             end
-        end)
+        end, { silent = ture })
 
         vim.keymap.set('i', '<c-n>', function()
-            if luasnip.choice_active() then
-                luasnip.change_choice(1)
+            if ls.choice_active() then
+                ls.change_choice(1)
             end
-        end)
+        end, { silent = true })
     end,
 }

@@ -12,6 +12,11 @@ return {
             paths = '~/.config/nvim/lua/snippets',
         })
 
+        ls.config.set_config({
+            history = true,
+            update_events = { 'TextChanged', 'TextChangedI' },
+        })
+
         vim.keymap.set({ 'i', 's' }, '<c-j>', function()
             if ls.expand_or_jumpable() then
                 ls.expand_or_jump()

@@ -11,7 +11,7 @@ local f = ls.function_node
 
 local keyword = function(index)
     return f(function(params)
-        return string.match(params[1][1], '%a+')
+        return string.match(params[1][1], '[A-Za-z-]+')
     end, { index, index })
 end
 
@@ -22,21 +22,15 @@ ls.add_snippets('vue', {
     s('/', fmt('<{} />', { i(0) })),
 
     postfix('/', fmt('<{}{} />{}', {
-        l(l.POSTFIX_MATCH),
-        i(1),
-        i(2),
+        l(l.POSTFIX_MATCH), i(1), i(2),
     })),
 
     postfix('>', fmt('<{}{}>\n\t{}\n</{}>{}', {
-        l(l.POSTFIX_MATCH),
-        i(1),
-        i(2),
-        l(l.POSTFIX_MATCH),
-        i(0),
+        l(l.POSTFIX_MATCH), i(1), i(2),
+        l(l.POSTFIX_MATCH), i(0),
     })),
 
     postfix('.log', fmt('console.log({}{})', {
-        l(l.POSTFIX_MATCH),
-        i(0),
+        l(l.POSTFIX_MATCH), i(0),
     })),
 }, { key = 'vue' })

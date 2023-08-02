@@ -27,7 +27,7 @@ return {
                 ['<c-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<c-f>'] = cmp.mapping.scroll_docs(4),
                 ['<c-e>'] = cmp.mapping.abort(),
-                ['<cr>'] = cmp.mapping.confirm({ select = true }),
+                -- ['<cr>'] = cmp.mapping.confirm({ select = true }),
                 ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
                 ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
             }),

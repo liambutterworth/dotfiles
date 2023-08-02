@@ -13,7 +13,7 @@ return {
         })
 
         ls.config.set_config({
-            history = true,
+            -- history = true,
             update_events = { 'TextChanged', 'TextChangedI' },
         })
 

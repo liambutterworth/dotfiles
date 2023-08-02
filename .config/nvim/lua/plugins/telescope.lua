@@ -5,6 +5,7 @@ return {
         'kyazdani42/nvim-web-devicons',
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
+        'benfowler/telescope-luasnip.nvim',
     },
 
     config = function()
@@ -98,6 +99,7 @@ return {
         })
 
         telescope.load_extension('file_browser')
+        telescope.load_extension('luasnip')
 
         vim.keymap.set('n', '<space><space>', '<cmd>Telescope find_files<cr>')
         vim.keymap.set('n', '<space><bs>', '<cmd>Telescope buffers<cr>')
@@ -114,5 +116,7 @@ return {
         vim.keymap.set('n', '<space>gs', '<cmd>Telescope git_status<cr>')
         vim.keymap.set('n', '<space>gb', '<cmd>Telescope git_branches<cr>')
         vim.keymap.set('n', '<space>gc', '<cmd>Telescope git_commits<cr>')
+        vim.keymap.set('n', '<space>j', '<cmd>Telescope luasnip<cr>')
+        vim.keymap.set('n', '<space>k', '<cmd>Telescope symbols<cr>')
     end,
 }

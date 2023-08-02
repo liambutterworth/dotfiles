@@ -4,15 +4,6 @@
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
-local plugins = {
-    require('plugins.cmp'),
-    require('plugins.core'),
-    require('plugins.lspconfig'),
-    require('plugins.luasnip'),
-    require('plugins.telescope'),
-    require('plugins.treesitter'),
-}
-
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
         'git',

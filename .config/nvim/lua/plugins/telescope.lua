@@ -5,7 +5,6 @@ return {
         'kyazdani42/nvim-web-devicons',
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
-        'benfowler/telescope-luasnip.nvim',
     },
 
     config = function()
@@ -35,7 +34,6 @@ return {
 
                 mappings = {
                     ['i'] = {
-                        ['<c-f>'] = actions.toggle_selection,
                         ['<c-s>'] = actions.file_split,
                         ['<c-x>'] = false,
                     },
@@ -53,11 +51,11 @@ return {
                     sort_mru = true,
 
                     mappings = {
-                        i = {
+                        ['i'] = {
                             ['<c-d>'] = 'delete_buffer',
                         },
 
-                        n = {
+                        ['n'] = {
                             ['<c-d>'] = 'delete_buffer',
                         },
                     },
@@ -82,15 +80,7 @@ return {
                             ['<c-h>'] = browser_actions.goto_home_dir,
                             ['<c-i>'] = browser_actions.toggle_hidden,
                             ['<c-r>'] = browser_actions.rename,
-                            ['<c-y>'] = browser_actions.copy,
-                        },
-
-                        ['n'] = {
-                            ['<c-d>'] = browser_actions.remove,
-                            ['<c-e>'] = browser_actions.create,
-                            ['<c-h>'] = browser_actions.goto_home_dir,
-                            ['<c-i>'] = browser_actions.toggle_hidden,
-                            ['<c-r>'] = browser_actions.rename,
+                            ['<c-m>'] = browser_actions.move,
                             ['<c-y>'] = browser_actions.copy,
                         },
                     },
@@ -99,7 +89,6 @@ return {
         })
 
         telescope.load_extension('file_browser')
-        telescope.load_extension('luasnip')
 
         vim.keymap.set('n', '<space><space>', '<cmd>Telescope find_files<cr>')
         vim.keymap.set('n', '<space><bs>', '<cmd>Telescope buffers<cr>')
@@ -116,7 +105,5 @@ return {
         vim.keymap.set('n', '<space>gs', '<cmd>Telescope git_status<cr>')
         vim.keymap.set('n', '<space>gb', '<cmd>Telescope git_branches<cr>')
         vim.keymap.set('n', '<space>gc', '<cmd>Telescope git_commits<cr>')
-        vim.keymap.set('n', '<space>j', '<cmd>Telescope luasnip<cr>')
-        vim.keymap.set('n', '<space>k', '<cmd>Telescope symbols<cr>')
     end,
 }

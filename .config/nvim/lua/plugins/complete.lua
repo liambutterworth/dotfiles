@@ -7,6 +7,7 @@ return {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-path',
+        'hrsh7th/cmp-buffer',
     },
 
     config = function()
@@ -18,6 +19,7 @@ return {
                 { name = 'nvim_lua' },
                 { name = 'path' },
                 { name = 'calc' },
+            }, {
                 { name = 'buffer' },
             }),
 
@@ -27,6 +29,16 @@ return {
                 ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
                 ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
             }),
+        })
+
+        cmp.setup.cmdline(':', {
+            mapping = cmp.mapping.preset.cmdline(),
+
+            sources = cmp.config.sources({
+                { name = 'path' }
+            }, {
+                { name = 'cmdline' }
+            })
         })
     end,
 }

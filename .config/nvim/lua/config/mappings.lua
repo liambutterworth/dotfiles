@@ -16,6 +16,6 @@ vim.keymap.set('n', 'd#', '#``dgN')
 vim.keymap.set('n', '<bs>', '<c-^>')
 
 vim.keymap.set('i', '<c-x><space>', '<space><space><esc>i')
-vim.keymap.set('i', '<c-x><cr>', '<cr><c-o>O')
+vim.keymap.set('i', '<c-x><cr>', '<cr><esc>O')
 vim.keymap.set('i', '<c-x>,', '<space><esc>m`A,<esc>``s')
 vim.keymap.set('i', '<c-x>;', '<space><esc>m`A;<esc>``s')

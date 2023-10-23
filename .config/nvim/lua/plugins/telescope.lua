@@ -14,10 +14,13 @@ return {
 
         telescope.setup({
             defaults = {
-                borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
                 prompt_prefix = '❯ ',
                 selection_caret = '❯ ',
                 sorting_strategy = 'ascending',
+
+                borderchars = {
+                    '─', '│', '─', '│', '┌', '┐', '┘', '└'
+                },
 
                 layout_config = {
                     horizontal = {
@@ -80,7 +83,6 @@ return {
                             ['<c-h>'] = browser_actions.goto_home_dir,
                             ['<c-i>'] = browser_actions.toggle_hidden,
                             ['<c-r>'] = browser_actions.rename,
-                            ['<c-m>'] = browser_actions.move,
                             ['<c-y>'] = browser_actions.copy,
                         },
                     },

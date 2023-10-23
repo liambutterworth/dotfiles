@@ -24,21 +24,20 @@ return {
             }),
 
             mapping = cmp.mapping.preset.insert({
-                ['<c-e>'] = cmp.mapping.abort(),
-                ['<cr>'] = cmp.mapping.confirm({ select = true }),
+                ['<c-h>'] = cmp.mapping.abort(),
+                ['<c-y>'] = cmp.mapping.confirm({ select = true }),
                 ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
                 ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
             }),
         })
 
-        cmp.setup.cmdline(':', {
-            mapping = cmp.mapping.preset.cmdline(),
-
-            sources = cmp.config.sources({
-                { name = 'path' }
-            }, {
-                { name = 'cmdline' }
-            })
-        })
+        -- cmp.setup.cmdline(':', {
+        --     mapping = cmp.mapping.preset.cmdline(),
+        --     sources = cmp.config.sources({
+        --         { name = 'path' }
+        --     }, {
+        --         { name = 'cmdline' }
+        --     })
+        -- })
     end,
 }

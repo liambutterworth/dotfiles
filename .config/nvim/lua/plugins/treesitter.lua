@@ -15,10 +15,6 @@ return {
         vim.keymap.set('n', '<f10>', '<cmd>TSHighlightCapturesUnderCursor<cr>')
 
         treesitter.setup {
-            context_commentstring = {
-                enable = true,
-            },
-
             highlight = {
                 enable = true,
             },
@@ -53,5 +49,9 @@ return {
                 },
             },
         }
+
+        require('ts_context_commentstring').setup({
+          enable_autocmd = false,
+        })
     end,
 }

@@ -79,7 +79,7 @@ return {
                     mappings = {
                         ['i'] = {
                             ['<c-d>'] = browser_actions.remove,
-                            ['<c-e>'] = browser_actions.create,
+                            ['<c-w>'] = browser_actions.create,
                             ['<c-h>'] = browser_actions.goto_home_dir,
                             ['<c-i>'] = browser_actions.toggle_hidden,
                             ['<c-r>'] = browser_actions.rename,

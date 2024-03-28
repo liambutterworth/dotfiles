@@ -8,12 +8,19 @@ return {
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
+        'hrsh7th/vim-vsnip'
     },
 
     config = function()
         local cmp = require('cmp')
 
         cmp.setup({
+            snippet = {
+                expand = function(args)
+                    vim.fn['vsnip#anonymous'](args.body)
+                end
+            },
+
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
                 { name = 'nvim_lua' },

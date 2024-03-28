@@ -56,12 +56,11 @@ set -x FZF_ALT_C_COMMAND "fd --type directory"
 set -x FZF_CTRL_T_COMMAND "rg --files --no-require-git"
 set -x FZF_DEFAULT_COMMAND "fd --type file --follow"
 set -x FZF_DEFAULT_OPTS "--color=$FZF_COLORS"
-
-set -x EDITOR 'nvim'
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x XDG_CACHE_HOME "$HOME/.cache"
 set -x XDG_DATA_HOME "$HOME/.local/share"
 set -x XDG_STATE_HOME "$HOME/.local/state"
+set -x EDITOR 'nvim'
 
 #
 # Startup

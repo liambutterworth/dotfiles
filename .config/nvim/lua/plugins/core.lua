@@ -1,5 +1,4 @@
 return {
-    'shaunsingh/nord.nvim',
     'tpope/vim-commentary',
     'tpope/vim-eunuch',
     'tpope/vim-repeat',

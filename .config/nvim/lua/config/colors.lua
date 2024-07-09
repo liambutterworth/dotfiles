@@ -8,6 +8,26 @@
 -- :: Tabline
 -- :: Float
 
+colors = {
+    none = 'none',
+    black = 0,
+    red = 1,
+    green = 2,
+    yellow = 3,
+    blue = 4,
+    magenta = 5,
+    cyan = 6,
+    white = 7,
+    brblack = 8,
+    brred = 9,
+    brgreen = 10,
+    bryellow = 11,
+    brblue = 12,
+    brmagenta = 13,
+    brcyan = 14,
+    brwhite = 15,
+}
+
 function highlight(name, options)
     if options.fg and not options.ctermfg then
         options.ctermfg = options.fg
@@ -24,139 +44,139 @@ end
 -- General
 --
 
-highlight('Constant', { fg='green' })
-highlight('ColorColumn', { bg='red', fg='black' })
-highlight('Comment', { fg='black', bold=true })
-highlight('CursorLine', { bg='none' })
-highlight('DiffAdd', { bg='green', fg='black' })
-highlight('DiffChange', { bg='yellow', fg='black' })
-highlight('DiffDelete', { bg='red', fg='black' })
-highlight('DiffText', { bg='blue', fg='black' })
-highlight('Directory', { fg='cyan' })
-highlight('Error', { bg='none', fg='red', bold=true })
-highlight('ErrorMsg', { bg='none', fg='red', bold=true })
-highlight('Folded', { bg='black', fg='white' })
-highlight('FoldColumn', { bg='black', fg='white' })
-highlight('Identifier', { fg='white' })
-highlight('Info', { fg='blue', bold=true })
-highlight('LineNr', { fg='black', bold=true })
-highlight('MatchParen', { bg='none', fg='yellow', bold=true })
-highlight('MoreMsg', { fg='green' })
-highlight('ModeMsg', { fg='white' })
-highlight('NonText', { bg='none', fg='black', bold=true })
-highlight('Normal', { bg='none', fg='white' })
-highlight('NormalFloat', { bg='none' })
-highlight('Number', { fg='magenta' })
-highlight('Operator', { fg='blue' })
-highlight('Pmenu', { bg='black', fg='white' })
-highlight('PmenuSbar', { bg='black' })
-highlight('PmenuSel', { bg='black', fg='white', bold=true })
-highlight('PmenuThumb', { bg='white', fg='black', bold=true })
-highlight('PreProc', { fg='blue' })
-highlight('Question', { fg='yellow' })
-highlight('SignColumn', { bg='none', fg='white' })
-highlight('Special', { fg='white' })
-highlight('SpecialKey', { fg='cyan' })
-highlight('SpecialChar', { fg='magenta' })
-highlight('SpellBad', { bg='none', fg='red', underline=true })
-highlight('SpellCap', { bg='none', fg='blue', underline=true })
-highlight('SpellRare', { bg='none', fg='magenta', underline=true })
-highlight('SpellLocal', { bg='none', fg='cyan', underline=true })
-highlight('Statement', { fg='blue' })
-highlight('Title', { fg='cyan', bold=true })
-highlight('Todo', { bg='none', fg='yellow' })
-highlight('Type', { fg='blue' })
-highlight('Underlined', { fg='cyan' })
-highlight('VertSplit', { bg='none', fg='black', bold=true })
-highlight('Visual', { bg='black', bold=true })
-highlight('Warning', { fg='yellow', bold=true })
-highlight('WarningMsg', { fg='yellow' })
+highlight('Constant', { fg=colors.green })
+highlight('ColorColumn', { bg=colors.red, fg=colors.black })
+highlight('Comment', { fg=colors.brblack, bold=true })
+highlight('CursorLine', { bg=colors.none })
+highlight('DiffAdd', { bg=colors.green, fg=colors.black })
+highlight('DiffChange', { bg=colors.yellow, fg=colors.black })
+highlight('DiffDelete', { bg=colors.red, fg=colors.black })
+highlight('DiffText', { bg=colors.blue, fg=colors.black })
+highlight('Directory', { fg=colors.cyan })
+highlight('Error', { bg=colors.none, fg=colors.red, bold=true })
+highlight('ErrorMsg', { bg=colors.none, fg=colors.red, bold=true })
+highlight('Folded', { bg=colors.black, fg=colors.white })
+highlight('FoldColumn', { bg=colors.black, fg=colors.white })
+highlight('Identifier', { fg=colors.white })
+highlight('Info', { fg=colors.blue, bold=true })
+highlight('LineNr', { fg=colors.black, bold=true })
+highlight('MatchParen', { bg=colors.none, fg=colors.yellow, bold=true })
+highlight('MoreMsg', { fg=colors.green })
+highlight('ModeMsg', { fg=colors.white })
+highlight('NonText', { bg=colors.none, fg=colors.black, bold=true })
+highlight('Normal', { bg=colors.none, fg=colors.white })
+highlight('NormalFloat', { bg=colors.none })
+highlight('Number', { fg=colors.magenta })
+highlight('Operator', { fg=colors.blue})
+highlight('Pmenu', { bg=colors.black, fg=colors.white })
+highlight('PmenuSbar', { bg=colors.black })
+highlight('PmenuSel', { bg=colors.black, fg=colors.white, bold=true })
+highlight('PmenuThumb', { bg=colors.white, fg=colors.black, bold=true })
+highlight('PreProc', { fg=colors.blue})
+highlight('Question', { fg=colors.yellow })
+highlight('SignColumn', { bg=colors.none, fg=colors.white })
+highlight('Special', { fg=colors.white })
+highlight('SpecialKey', { fg=colors.cyan })
+highlight('SpecialChar', { fg=colors.magenta })
+highlight('SpellBad', { bg=colors.none, fg=colors.red, underline=true })
+highlight('SpellCap', { bg=colors.none, fg=colors.blue, underline=true })
+highlight('SpellRare', { bg=colors.none, fg=colors.magenta, underline=true })
+highlight('SpellLocal', { bg=colors.none, fg=colors.cyan, underline=true })
+highlight('Statement', { fg=colors.blue})
+highlight('Title', { fg=colors.cyan, bold=true })
+highlight('Todo', { bg=colors.none, fg=colors.yellow })
+highlight('Type', { fg=colors.blue})
+highlight('Underlined', { fg=colors.cyan })
+highlight('VertSplit', { bg=colors.none, fg=colors.black, bold=true })
+highlight('Visual', { bg=colors.black, bold=true })
+highlight('Warning', { fg=colors.yellow, bold=true })
+highlight('WarningMsg', { fg=colors.yellow })
 
 --
 -- Treesitter
 --
 
-highlight('@boolean', { fg='magenta' })
-highlight('@constant', { fg='cyan' })
-highlight('@constant.builtin', { fg='blue' })
-highlight('@constructor', { fg='cyan' })
-highlight('@float', { fg='magenta' })
-highlight('@function', { fg='cyan' })
-highlight('@function.builtin', { fg='cyan' })
-highlight('@function.call', { fg='cyan' })
-highlight('@method', { fg='cyan' })
-highlight('@method.call', { fg='cyan' })
-highlight('@punctuation.bracket', { fg='white' })
-highlight('@punctuation.delimiter', { fg='white' })
-highlight('@tag', { fg='blue' })
-highlight('@tag.attribute', { fg='cyan' })
-highlight('@type', { fg='cyan' })
-highlight('@type.builtin', { fg='blue' })
-highlight('@type.definition', { fg='cyan' })
-highlight('@type.qualifier', { fg='blue' })
-highlight('@variable.builtin', { fg='blue' })
+highlight('@boolean', { fg=colors.magenta })
+highlight('@constant', { fg=colors.cyan })
+highlight('@constant.builtin', { fg=colors.blue})
+highlight('@constructor', { fg=colors.cyan })
+highlight('@float', { fg=colors.magenta })
+highlight('@function', { fg=colors.cyan })
+highlight('@function.builtin', { fg=colors.cyan })
+highlight('@function.call', { fg=colors.cyan })
+highlight('@method', { fg=colors.cyan })
+highlight('@method.call', { fg=colors.cyan })
+highlight('@punctuation.bracket', { fg=colors.white })
+highlight('@punctuation.delimiter', { fg=colors.white })
+highlight('@tag', { fg=colors.blue})
+highlight('@tag.attribute', { fg=colors.cyan })
+highlight('@type', { fg=colors.cyan })
+highlight('@type.builtin', { fg=colors.blue})
+highlight('@type.definition', { fg=colors.cyan })
+highlight('@type.qualifier', { fg=colors.blue})
+highlight('@variable.builtin', { fg=colors.blue})
 
 --
 -- Telescope
 --
 
-highlight('TelescopeMatching', { fg='green', bold=true })
-highlight('TelescopeMultiSelection', { fg='magenta' })
-highlight('TelescopeNormal', { fg='white' })
-highlight('TelescopePromptPrefix', { fg='magenta', bold=true })
-highlight('TelescopeResultsDiffChange', { bg='none', fg='yellow' })
-highlight('TelescopeResultsDiffAdd', { bg='none', fg='green' })
-highlight('TelescopeResultsDiffDelete', { bg='none', fg=red })
-highlight('TelescopeResultsDiffUntracked', { bg='none', fg=red })
-highlight('TelescopeResultsClass', { fg='blue' })
-highlight('TelescopeResultsConstant', { fg='magenta' })
-highlight('TelescopeResultsField', { fg='blue' })
-highlight('TelescopeResultsIdentifier', { fg='yellow' })
-highlight('TelescopeResultsFunction', { fg='cyan' })
-highlight('TelescopeResultsMethod', { fg='cyan' })
-highlight('TelescopeResultsOperator', { fg='blue' })
-highlight('TelescopeResultsStruct', { fg='yellow' })
-highlight('TelescopeResultsVariable', { fg='blue' })
-highlight('TelescopeSelection', { bg='none', fg='white', bold=true })
-highlight('TelescopeSelectionCaret', { bg='none', fg='magenta', bold=true })
+highlight('TelescopeMatching', { fg=colors.green, bold=true })
+highlight('TelescopeMultiSelection', { fg=colors.magenta })
+highlight('TelescopeNormal', { fg=colors.white })
+highlight('TelescopePromptPrefix', { fg=colors.magenta, bold=true })
+highlight('TelescopeResultsDiffChange', { bg=colors.none, fg=colors.yellow })
+highlight('TelescopeResultsDiffAdd', { bg=colors.none, fg=colors.green })
+highlight('TelescopeResultsDiffDelete', { bg=colors.none, fg=red })
+highlight('TelescopeResultsDiffUntracked', { bg=colors.none, fg=red })
+highlight('TelescopeResultsClass', { fg=colors.blue})
+highlight('TelescopeResultsConstant', { fg=colors.magenta })
+highlight('TelescopeResultsField', { fg=colors.blue})
+highlight('TelescopeResultsIdentifier', { fg=colors.yellow })
+highlight('TelescopeResultsFunction', { fg=colors.cyan })
+highlight('TelescopeResultsMethod', { fg=colors.cyan })
+highlight('TelescopeResultsOperator', { fg=colors.blue})
+highlight('TelescopeResultsStruct', { fg=colors.yellow })
+highlight('TelescopeResultsVariable', { fg=colors.blue})
+highlight('TelescopeSelection', { bg=colors.none, fg=colors.white, bold=true })
+highlight('TelescopeSelectionCaret', { bg=colors.none, fg=colors.magenta, bold=true })
 
 --
 -- Statusline
 --
 
-highlight('StatusLine', { bg='none', fg='none' })
-highlight('StatusLineNC', { bg='none', fg='white' })
-highlight('StatusLineHasErrors', { bg='none', fg='red', bold=true })
-highlight('StatusLineHasInformation', { bg='none', fg='blue', bold=true })
-highlight('StatusLineHasWarnings', { bg='none', fg='yellow', bold=true })
-highlight('StatusLineOperator', { bg='none', fg='blue', bold=true })
-highlight('StatusLineNormal', { bg='black', fg='none' })
-highlight('StatusLineNumber', { bg='none', fg='magenta', bold=true })
-highlight('StatusLineInactive', { bg='white', fg='black', bold=true })
-highlight('StatusLineModified', { bg='yellow', fg='black' })
-highlight('StatusLineUnmodified', { bg='green', fg='black' })
-highlight('StatusLineReadOnly', { bg='red', fg='black' })
+highlight('StatusLine', { bg=colors.none, fg=colors.none })
+highlight('StatusLineNC', { bg=colors.none, fg=colors.white })
+highlight('StatusLineHasErrors', { bg=colors.none, fg=colors.red, bold=true })
+highlight('StatusLineHasInformation', { bg=colors.none, fg=colors.blue, bold=true })
+highlight('StatusLineHasWarnings', { bg=colors.none, fg=colors.yellow, bold=true })
+highlight('StatusLineOperator', { bg=colors.none, fg=colors.blue, bold=true })
+highlight('StatusLineNormal', { bg=colors.black, fg=colors.none })
+highlight('StatusLineNumber', { bg=colors.none, fg=colors.magenta, bold=true })
+highlight('StatusLineInactive', { bg=colors.white, fg=colors.black, bold=true })
+highlight('StatusLineModified', { bg=colors.yellow, fg=colors.black })
+highlight('StatusLineUnmodified', { bg=colors.green, fg=colors.black })
+highlight('StatusLineReadOnly', { bg=colors.red, fg=colors.black })
 
 --
 -- Tabline
 --
 
-highlight('TabLine', { bg='none', fg='white' })
-highlight('TablineHasErrors', { bg='none', fg='red' })
-highlight('TablineHasInformation', { bg='none', fg='blue' })
-highlight('TablineHasWarnings', { bg='none', fg='yellow' })
-highlight('TabLineModifiedActive', { bg='yellow', fg='black' })
-highlight('TabLineModifiedInactive', { bg='none', fg='yellow' })
-highlight('TabLineReadOnlyActive', { bg='red', fg='black' })
-highlight('TabLineReadOnlyInactive', { bg='none', fg='red' })
-highlight('TabLineUnmodifiedActive', { bg='green', fg='black' })
-highlight('TabLineUnmodifiedInactive', { bg='none', fg='green' })
+highlight('TabLine', { bg=colors.none, fg=colors.white })
+highlight('TablineHasErrors', { bg=colors.none, fg=colors.red })
+highlight('TablineHasInformation', { bg=colors.none, fg=colors.blue })
+highlight('TablineHasWarnings', { bg=colors.none, fg=colors.yellow })
+highlight('TabLineModifiedActive', { bg=colors.yellow, fg=colors.black })
+highlight('TabLineModifiedInactive', { bg=colors.none, fg=colors.yellow })
+highlight('TabLineReadOnlyActive', { bg=colors.red, fg=colors.black })
+highlight('TabLineReadOnlyInactive', { bg=colors.none, fg=colors.red })
+highlight('TabLineUnmodifiedActive', { bg=colors.green, fg=colors.black })
+highlight('TabLineUnmodifiedInactive', { bg=colors.none, fg=colors.green })
 
 --
 -- Float
 --
 
-highlight('Float', { bg='none' })
-highlight('FloatBorder', { bg='none', fg='none' })
-highlight('FloatShadow', { bg='none' })
-highlight('FloatShadowThrough', { bg='yellow', bold=true })
+highlight('Float', { bg=colors.none })
+highlight('FloatBorder', { bg=colors.none, fg=colors.none })
+highlight('FloatShadow', { bg=colors.none })
+highlight('FloatShadowThrough', { bg=colors.yellow, bold=true })

@@ -18,7 +18,6 @@ vim.opt.mouse = 'n'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
-vim.opt.shell = '/bin/bash'
 vim.opt.shiftwidth = 4
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 vim.opt.showmode = false
@@ -29,6 +28,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
+vim.opt.termguicolors = false
 vim.opt.undofile = true
 vim.opt.wildignorecase = true
 vim.opt.wrap = false

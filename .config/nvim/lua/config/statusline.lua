@@ -23,7 +23,7 @@ function GetStatusLineForBuffer(buffer)
         table.insert(statusline, '%#StatusLineUnmodified#')
     end
 
-    table.insert(statusline, '  ')
+    table.insert(statusline, '  ')
     table.insert(statusline, '%#StatusLine# %f%<%=')
     table.insert(statusline, '%#StatusLineNumber#%l')
     table.insert(statusline, '%#StatusLineOperator#/')

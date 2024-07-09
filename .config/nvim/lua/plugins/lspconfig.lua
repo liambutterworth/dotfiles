@@ -2,7 +2,7 @@ return {
     'neovim/nvim-lspconfig',
 
     config = function()
-        local config = require('lspconfig')
+        local lspconfig = require('lspconfig')
         local capabilities = vim.lsp.protocol.make_client_capabilities()
 
         vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
@@ -49,27 +49,34 @@ return {
                 'additionalTextEdits',
             }
         }
+            
 
-        config.rust_analyzer.setup {
+        lspconfig.intelephense.setup({
             capabilities = capabilities,
-        }
+            on_attach = on_attach
+        })
 
-        config.html.setup {
-            capabilities = capabilities,
-            on_attach = on_attach,
-        }
-
-        config.tailwindcss.setup {
+        lspconfig.html.setup {
             capabilities = capabilities,
             on_attach = on_attach,
         }
 
-        config.jsonls.setup {
+        lspconfig.cssls.setup({
             capabilities = capabilities,
             on_attach = on_attach,
-        }
+        })
 
-        config.volar.setup {
+        lspconfig.jsonls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lspconfig.tailwindcss.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lspconfig.volar.setup({
             capabilities = capabilities,
             on_attach = on_attach,
 
@@ -78,11 +85,6 @@ return {
                     tsdk = '/usr/local/lib/node_modules/typescript/lib'
                 }
             }
-        }
-
-        config.intelephense.setup {
-            capabilities = capabilities,
-            on_attach = on_attach
-        }
+        })
     end,
 }

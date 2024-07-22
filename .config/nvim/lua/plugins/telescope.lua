@@ -79,9 +79,9 @@ return {
                     mappings = {
                         ['i'] = {
                             ['<c-d>'] = browser_actions.remove,
-                            ['<c-w>'] = browser_actions.create,
-                            ['<c-h>'] = browser_actions.goto_home_dir,
                             ['<c-i>'] = browser_actions.toggle_hidden,
+                            ['<c-j>'] = browser_actions.move,
+                            ['<c-k>'] = browser_actions.create,
                             ['<c-r>'] = browser_actions.rename,
                             ['<c-y>'] = browser_actions.copy,
                         },

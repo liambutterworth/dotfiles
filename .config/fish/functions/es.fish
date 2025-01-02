@@ -1,6 +1,6 @@
 function es
     set -l environment $argv[1]
-    set -l index $argv[2]
+    set -l endpoint $argv[2]
     set -l file $argv[3]
 
     set host (
@@ -12,13 +12,17 @@ function es
         end
     )
 
+    # if not string match -r '/' $endpoint
+    #     set endpoint (echo "$endpoint/_search")
+    # end
+
     if test -n "$file"
         eval curl \
-            -XGET "'$host/$endpoint/_search?pretty'" \
+            -XGET "'$host/$endpoint'" \
             -H "'Content-Type: application/json'" \
             -H "'Accept: application/json'" \
             -d "@"$file
     else
-        eval curl -XGET "'$host/$index/_search?pretty'"
+        eval curl -XGET "'$host/$endpoint'"
     end
 end

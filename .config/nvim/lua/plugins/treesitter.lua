@@ -11,8 +11,20 @@ return {
 
     config = function()
         local treesitter = require('nvim-treesitter.configs')
+        local parsers = require('nvim-treesitter.parsers')
+        local parser_config = parsers.get_parser_configs()
 
         vim.keymap.set('n', '<f10>', '<cmd>TSHighlightCapturesUnderCursor<cr>')
+
+        parser_config.blade = {
+            install_info = {
+                url = 'https://github.com/EmranMR/tree-sitter-blade',
+                files = { 'src/parser.c' },
+                branch = 'main',
+            },
+
+            filetype = 'blade'
+        }
 
         treesitter.setup {
             highlight = {

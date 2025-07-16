@@ -19,3 +19,5 @@ vim.keymap.set('i', '<c-e><space>', '<space><space><esc>i')
 vim.keymap.set('i', '<c-e><cr>', '<cr><esc>O')
 vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
 vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
+
+vim.keymap.set('n', '<space>r', '<cmd>LspRestart<cr>')

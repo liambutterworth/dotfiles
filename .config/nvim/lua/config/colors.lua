@@ -1,13 +1,3 @@
---
--- Colors
---
--- :: General
--- :: Treesitter
--- :: Telescope
--- :: Statusline
--- :: Tabline
--- :: Float
-
 colors = {
     none = 'none',
     black = 0,
@@ -39,10 +29,6 @@ function highlight(name, options)
 
     vim.api.nvim_set_hl(0, name, options)
 end
-
---
--- General
---
 
 highlight('Constant', { fg=colors.green })
 highlight('ColorColumn', { bg=colors.red, fg=colors.black })
@@ -92,11 +78,6 @@ highlight('VertSplit', { bg=colors.none, fg=colors.black, bold=true })
 highlight('Visual', { bg=colors.black, bold=true })
 highlight('Warning', { fg=colors.yellow, bold=true })
 highlight('WarningMsg', { fg=colors.yellow })
-
---
--- Treesitter
---
-
 highlight('@boolean', { fg=colors.magenta })
 highlight('@constant', { fg=colors.cyan })
 highlight('@constant.builtin', { fg=colors.blue})
@@ -118,11 +99,6 @@ highlight('@type.definition', { fg=colors.cyan })
 highlight('@type.qualifier', { fg=colors.blue})
 highlight('@variable.builtin', { fg=colors.blue})
 highlight('@variable', { fg=colors.white })
-
---
--- Telescope
---
-
 highlight('TelescopeMatching', { fg=colors.green, bold=true })
 highlight('TelescopeMultiSelection', { fg=colors.magenta })
 highlight('TelescopeNormal', { fg=colors.white })
@@ -142,11 +118,6 @@ highlight('TelescopeResultsStruct', { fg=colors.yellow })
 highlight('TelescopeResultsVariable', { fg=colors.blue})
 highlight('TelescopeSelection', { bg=colors.none, fg=colors.white, bold=true })
 highlight('TelescopeSelectionCaret', { bg=colors.none, fg=colors.magenta, bold=true })
-
---
--- Statusline
---
-
 highlight('StatusLine', { bg=colors.none, fg=colors.none })
 highlight('StatusLineNC', { bg=colors.none, fg=colors.white })
 highlight('StatusLineHasErrors', { bg=colors.none, fg=colors.red, bold=true })
@@ -159,11 +130,6 @@ highlight('StatusLineInactive', { bg=colors.white, fg=colors.black, bold=true })
 highlight('StatusLineModified', { bg=colors.yellow, fg=colors.black })
 highlight('StatusLineUnmodified', { bg=colors.green, fg=colors.black })
 highlight('StatusLineReadOnly', { bg=colors.red, fg=colors.black })
-
---
--- Tabline
---
-
 highlight('TabLine', { bg=colors.none, fg=colors.white })
 highlight('TablineHasErrors', { bg=colors.none, fg=colors.red })
 highlight('TablineHasInformation', { bg=colors.none, fg=colors.blue })
@@ -174,11 +140,6 @@ highlight('TabLineReadOnlyActive', { bg=colors.red, fg=colors.black })
 highlight('TabLineReadOnlyInactive', { bg=colors.none, fg=colors.red })
 highlight('TabLineUnmodifiedActive', { bg=colors.green, fg=colors.black })
 highlight('TabLineUnmodifiedInactive', { bg=colors.none, fg=colors.green })
-
---
--- Float
---
-
 highlight('Float', { bg=colors.none })
 highlight('FloatBorder', { bg=colors.none, fg=colors.none })
 highlight('FloatShadow', { bg=colors.none })

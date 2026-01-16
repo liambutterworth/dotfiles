@@ -43,6 +43,6 @@ return {
         vim.lsp.enable('html')
         vim.lsp.enable('cssls')
         vim.lsp.enable('jsonls')
-        vim.lsp.enable('vue_ls')
+        -- vim.lsp.enable('vue_ls')
     end,
 }

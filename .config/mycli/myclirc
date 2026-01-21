@@ -1,0 +1,33 @@
+[main]
+key_bindings = vi
+syntax_style = bw
+prompt = '\u@\h:\d\n❯ '
+log_file = ~/.local/state/mycli/log
+multi_line = true
+less_chatty = true
+
+[colors]
+Token.Text = '#eceff4'
+Token.Comment = '#4c566a'
+Token.Generic.Heading = '#81a1c1'
+Token.Generic.Subheading = '#88c0d0'
+Token.Generic.Error = '#bf616a'
+Token.Generic.Traceback = '#bf616a'
+Token.Keyword = 'bold #81a1c1'
+Token.Name.Builtin = '#88c0d0'
+Token.Literal.String = '#a3be8c'
+Token.Literal.Number = '#b48ead'
+Token.Operator = '#8fbcbb'
+Token.Punctuation = '#eceff4'
+Token.Name = '#d8dee9'
+Token.Name.Table = '#d8dee9'
+Token.Name.Column = '#e5e9f0'
+Token.Name.Placeholder = '#ebcb8b'
+Token.Prompt = '#88c0d0'
+Token.Prompt.Username = '#a3be8c'
+Token.Prompt.Host = '#81a1c1'
+Token.Prompt.Database = '#b48ead'
+Token.Menu.Completions.Completion.Current = 'bg:#4c566a #8fbcbb'
+Token.Menu.Completions.Completion = 'bg:#3b4252 #eceff4'
+Token.Menu.Completions.MultiColumnMeta = 'bg:#434c5e #d8dee9'
+Token.Toolbar = 'bg:#2e3440 #eceff4'

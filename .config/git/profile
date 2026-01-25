@@ -1,0 +1,6 @@
+[user]
+    email = liambutterworth@randallreilly.com
+[credential "https://dev.azure.com"]
+    useHttpPath = true
+[http]
+    sslcainfo = /Users/liambutterworth/.local/share/certificates/ZscalerRootCertificate-2048-SHA256-Talent.crt

@@ -10,5 +10,5 @@
 [user]
     name = Liam Butterworth
     email = contact@liambutterworth.email
-[includeIf "gitdir:~/.config/git/profile"]
+[include]
     path = ~/.config/git/profile

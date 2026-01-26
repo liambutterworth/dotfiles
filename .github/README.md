@@ -9,7 +9,7 @@
 
 ## Install
 
-Clone bare repo config into hidden directory
+Clone bare repo config
 
 `git clone --bare https://github.com/liambutterworth/dotfiles ~/.dotfiles`
 

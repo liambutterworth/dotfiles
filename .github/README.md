@@ -4,7 +4,7 @@
 
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Nerd Font - Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
-- CLI Packages `fish git neovim tmux fzf ripgrep`
+- CLI Packages `fish git neovim tmux fzf fd ripgrep`
 - LSP Packages `intelephense vscode-langservers-extracted`
 
 ## Install

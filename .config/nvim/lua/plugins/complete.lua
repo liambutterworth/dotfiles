@@ -4,6 +4,7 @@ return {
     dependencies = {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-calc',
+        'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-path',
@@ -34,23 +35,10 @@ return {
                 ['<c-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
                 ['<c-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
 
-                ['<cr>'] = cmp.mapping({
-                    i = cmp.mapping.confirm({
-                        behavior = cmp.ConfirmBehavior.Replace,
-                        select = false,
-                    }),
-
-                    c = function(fallback)
-                        if cmp.visible() then
-                            cmp.confirm({
-                                behavior = cmp.ConfirmBehavior.Replace,
-                                select = false,
-                            })
-                        else
-                            fallback()
-                        end
-                    end
-                }),
+                ['<cr>'] = cmp.mapping(cmp.mapping.confirm({
+                    behavior = cmp.ConfirmBehavior.Replace,
+                    select = false,
+                }), {'i', 'c'}),
 
                 ['<tab>'] = cmp.mapping(function (fallback)
                     if cmp.visible() then
@@ -62,7 +50,7 @@ return {
                     else
                         fallback()
                     end
-                end, { 'i', 's' }),
+                end, {'i', 's'}),
 
                 ['<s-tab>'] = cmp.mapping(function (fallback)
                     if cmp.visible() then
@@ -74,11 +62,11 @@ return {
                     else
                         fallback()
                     end
-                end, { 'i', 's' }),
+                end, {'i', 's'}),
             },
         })
 
-        cmp.setup.cmdline('/', {
+        cmp.setup.cmdline({'/', '?'}, {
             mapping = cmp.mapping.preset.cmdline(),
 
             sources = {

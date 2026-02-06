@@ -29,12 +29,77 @@ return {
                 { name = 'buffer' },
             }),
 
-            mapping = cmp.mapping.preset.insert({
+            mapping = {
                 ['<c-h>'] = cmp.mapping.abort(),
-                ['<c-y>'] = cmp.mapping.confirm({ select = true }),
-                ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-                ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
-            }),
+                ['<c-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
+                ['<c-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
+
+                ['<cr>'] = cmp.mapping({
+                    i = cmp.mapping.confirm({
+                        behavior = cmp.ConfirmBehavior.Replace,
+                        select = false,
+                    }),
+
+                    c = function(fallback)
+                        if cmp.visible() then
+                            cmp.confirm({
+                                behavior = cmp.ConfirmBehavior.Replace,
+                                select = false,
+                            })
+                        else
+                            fallback()
+                        end
+                    end
+                }),
+
+                ['<tab>'] = cmp.mapping(function (fallback)
+                    if cmp.visible() then
+                        if #cmp.get_entries() == 1 then
+                            cmp.confirm({ select = true })
+                        else
+                            cmp.select_next_item()
+                        end
+                    else
+                        fallback()
+                    end
+                end, { 'i', 's' }),
+
+                ['<s-tab>'] = cmp.mapping(function (fallback)
+                    if cmp.visible() then
+                        if #cmp.get_entries() == 1 then
+                            cmp.confirm({ select = true })
+                        else
+                            cmp.select_prev_item()
+                        end
+                    else
+                        fallback()
+                    end
+                end, { 'i', 's' }),
+            },
+        })
+
+        cmp.setup.cmdline('/', {
+            mapping = cmp.mapping.preset.cmdline(),
+
+            sources = {
+                { name = 'buffer' },
+            },
+        })
+
+        cmp.setup.cmdline(':', {
+            mapping = cmp.mapping.preset.cmdline(),
+
+            sources = cmp.config.sources({
+                { name = 'path' },
+            }, {
+                {
+                    name = 'cmdline',
+
+                    option = {
+                        ignore_cmds = { 'Man', '!' }
+                    },
+                },
+            })
         })
     end,
 }

@@ -39,6 +39,10 @@ return {
                 enable = true,
             },
 
+            endwise = {
+                enable = true,
+            },
+
             textobjects = {
                 select = {
                     enable = true,

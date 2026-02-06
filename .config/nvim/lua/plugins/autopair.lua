@@ -11,11 +11,13 @@ return {
 
         autopairs.setup({
             check_ts = true,
-            disable_filetype = { 'TelescopePrompt', 'vim' },
+            disable_filetype = { 'TelescopePrompt' },
         })
 
-        autotag.setup()
-
-        autopairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
+        autotag.setup({
+            opts = {
+                enable_close_on_slash = true
+            }
+        })
     end,
 }

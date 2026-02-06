@@ -9,7 +9,9 @@ function GetStatusLineForBuffer(buffer)
 
     table.insert(statusline, '%#StatusLine#')
 
-    if buffer ~= vim.fn.bufnr('%') then
+    if vim.fn.reg_recording() ~= '' then
+        table.insert(statusline, '%#StatusLineIsRecording#')
+    elseif buffer ~= vim.fn.bufnr('%') then
         table.insert(statusline, '%#StatusLineInactive#')
     elseif vim.bo[buffer].readonly then
         table.insert(statusline, '%#StatusLineReadOnly#')
@@ -19,7 +21,12 @@ function GetStatusLineForBuffer(buffer)
         table.insert(statusline, '%#StatusLineUnmodified#')
     end
 
-    table.insert(statusline, '  ')
+    if vim.fn.reg_recording() ~= '' then
+        table.insert(statusline, ' 󰑊 ')
+    else
+        table.insert(statusline, '  ')
+    end
+
     table.insert(statusline, '%#StatusLine# %f%<%=')
     table.insert(statusline, '%#StatusLineNumber#%l')
     table.insert(statusline, '%#StatusLineOperator#/')

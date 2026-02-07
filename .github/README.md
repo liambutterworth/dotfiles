@@ -1,5 +1,3 @@
-# Dotfiles
-
 ### Dependencies
 
 - [Alacritty](https://github.com/alacritty/alacritty)

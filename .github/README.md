@@ -5,8 +5,8 @@
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
 - CLI Packages `fish git neovim tmux fzf fd ripgrep`
+- TUI Packages `atac lazydocker lazygit lazysql`
 - LSP Packages `intelephense vscode-langservers-extracted`
-- TUI Packages `lazysql atac`
 
 ## Install
 

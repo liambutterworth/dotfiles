@@ -1,6 +1,6 @@
 # Dotfiles
 
-## Dependencies
+### Dependencies
 
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
@@ -8,7 +8,7 @@
 - TUI Packages `atac lazydocker lazygit lazysql`
 - LSP Packages `intelephense vscode-langservers-extracted`
 
-## Install
+### Install
 
 Clone bare repo config
 

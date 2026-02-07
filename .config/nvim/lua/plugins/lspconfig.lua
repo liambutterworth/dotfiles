@@ -2,11 +2,10 @@ return {
     'neovim/nvim-lspconfig',
 
     config = function()
-        vim.lsp.enable('intelephense')
         vim.lsp.enable('html')
         vim.lsp.enable('cssls')
         vim.lsp.enable('jsonls')
-        vim.lsp.enable('vue_ls')
+        vim.lsp.enable('intelephense')
 
         vim.keymap.set('n', ']d', vim.diagnostic.goto_prev)
         vim.keymap.set('n', '[d', vim.diagnostic.goto_next)

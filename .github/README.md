@@ -6,6 +6,7 @@
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
 - CLI Packages `fish git neovim tmux fzf fd ripgrep`
 - LSP Packages `intelephense vscode-langservers-extracted`
+- TUI Packages `lazysql atac`
 
 ## Install
 

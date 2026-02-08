@@ -16,10 +16,6 @@ function fish_prompt
         end
     )
 
-    # echo (set_color -o blue)"$directory"
-    # echo (set_color -o brblack)"$branch"
-    # echo -n (set_color -o magenta)"$character"
-
     printf '%s %s\n%s ' \
         (set_color -o blue)"$directory" \
         (set_color -o brblack)"$branch" \

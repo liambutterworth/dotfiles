@@ -1,3 +1,3 @@
-function dot -w git -d "Manage dotfiles"
+function dot -w git
     git --git-dir=$HOME/.dotfiles --work-tree=$HOME $argv
 end

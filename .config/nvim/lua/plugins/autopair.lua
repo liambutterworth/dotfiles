@@ -20,5 +20,8 @@ return {
                 enable_close_on_slash = true
             }
         })
+
+        vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
+        vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
     end,
 }

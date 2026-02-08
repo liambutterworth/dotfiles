@@ -16,7 +16,13 @@ set -l color (string join ',' \
     'border:7'
 )
 
-set -x SKIM_TMUX_OPTS '80%,80%'
+set -x SKIM_DEFAULT_OPTIONS (string join ' ' -- \
+    "--color=$color" \
+    "--prompt='❯ '" \
+    "--selector='❯'" \
+    "--multi-selector='+'"
+)
+
 set -x SKIM_ALT_C_COMMAND 'fd --type directory'
 set -x SKIM_CTRL_T_COMMAND 'fd'
-set -x SKIM_DEFAULT_OPTIONS "--color=$color --prompt='❯ ' --selector='❯' --multi-selector='+'"
+set -x SKIM_TMUX_OPTS '80%,80%'

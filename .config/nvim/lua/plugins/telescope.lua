@@ -17,10 +17,7 @@ return {
                 prompt_prefix = '❯ ',
                 selection_caret = '❯ ',
                 sorting_strategy = 'ascending',
-
-                borderchars = {
-                    '─', '│', '─', '│', '┌', '┐', '┘', '└'
-                },
+                borderchars = {'─', '│', '─', '│', '┌', '┐', '┘', '└'},
 
                 layout_config = {
                     horizontal = {

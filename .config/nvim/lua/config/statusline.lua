@@ -45,7 +45,7 @@ function GetStatusLineForBuffer(buffer)
         table.insert(statusline, '%#StatusLine#')
     end
 
-    table.insert(statusline, '  ')
+    table.insert(statusline, ' 󰑊 ')
 
     return table.concat(statusline)
 end

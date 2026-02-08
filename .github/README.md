@@ -2,8 +2,7 @@
 
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
-- CLI Packages `fish git neovim tmux fzf fd ripgrep`
-- TUI Packages `atac lazydocker lazygit lazysql`
+- CLI Packages `tmux fish neovim git mysql httpie tree fd rg sk`
 - LSP Packages `intelephense vscode-langservers-extracted`
 
 # Install

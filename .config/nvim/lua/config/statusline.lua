@@ -36,16 +36,16 @@ function GetStatusLineForBuffer(buffer)
     table.insert(statusline, '%#StatusLineOperator# │')
 
     if next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.ERROR })) then
-        table.insert(statusline, '%#StatusLineHasErrors#')
+        table.insert(statusline, '%#StatusLineHasErrors#  ')
     elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.INFO })) then
-        table.insert(statusline, '%#StatusLineHasInformation#')
+        table.insert(statusline, '%#StatusLineHasInformation#  ')
+    elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.HINT })) then
+        table.insert(statusline, '%#StatusLineHasInformation#  ')
     elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.WARN })) then
-        table.insert(statusline, '%#StatusLineHasWarnings#')
+        table.insert(statusline, '%#StatusLineHasWarnings#  ')
     else
-        table.insert(statusline, '%#StatusLine#')
+        table.insert(statusline, '%#StatusLine#  ')
     end
-
-    table.insert(statusline, ' 󰑊 ')
 
     return table.concat(statusline)
 end

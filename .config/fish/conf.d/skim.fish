@@ -1,11 +1,11 @@
 set -l color (string join ',' \
     'fg:8' \
     'bg:-1' \
-    'matched:3' \
+    'matched:1' \
     'matched_bg:-1' \
     'current:15' \
     'current_bg:-1' \
-    'current_match:11' \
+    'current_match:1' \
     'current_match_bg:-1' \
     'spinner:2' \
     'info:2' \

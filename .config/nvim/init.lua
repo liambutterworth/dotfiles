@@ -1,7 +1,7 @@
 require('config.settings')
 require('config.mappings')
 require('config.colors')
-require('config.filetypes')
 require('config.tabline')
 require('config.statusline')
+require('config.filetypes')
 require('config.plugins')

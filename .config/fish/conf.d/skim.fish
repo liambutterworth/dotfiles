@@ -18,5 +18,5 @@ set -l color (string join ',' \
 
 set -x SKIM_TMUX_OPTS '80%,80%'
 set -x SKIM_ALT_C_COMMAND 'fd --type directory'
-set -x SKIM_CTRL_T_COMMAND 'rg --files'
+set -x SKIM_CTRL_T_COMMAND 'fd'
 set -x SKIM_DEFAULT_OPTIONS "--color=$color --prompt='❯ ' --selector='❯' --multi-selector='+'"

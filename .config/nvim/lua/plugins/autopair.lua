@@ -13,11 +13,19 @@ return {
             map_cr = true,
             check_ts = true,
             disable_filetype = { 'TelescopePrompt' },
+            disable_in_macro = true,
         })
 
         autotag.setup({
             opts = {
-                enable_close_on_slash = true
+                enable_close_on_slash = true,
+            },
+
+            per_filetype = {
+                ['php'] = {
+                    enable_close = false,
+                    enable_rename = false,
+                }
             }
         })
 

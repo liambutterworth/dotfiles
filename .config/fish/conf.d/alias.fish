@@ -1,5 +1,5 @@
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias http="http --pretty=all"
-alias http="https --pretty=all"
+alias https="https --pretty=all"
 alias less="less -R"
 alias rg="rg --colors 'path:fg:blue' --colors 'line:fg:magenta'"

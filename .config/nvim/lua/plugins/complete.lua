@@ -26,11 +26,16 @@ return {
 
             mapping = {
                 ['<c-h>'] = cmp.mapping.abort(),
-                ['<c-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
-                ['<c-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
+                ['<c-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
+                ['<c-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
                 ['<cr>'] = cmp.mapping(cmp.mapping.confirm()),
                 ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item()),
                 ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item()),
+            },
+
+            window = {
+                completion = cmp.config.window.bordered({ border = 'single' }),
+                documentation = cmp.config.window.bordered({ border = 'single' }),
             },
         })
     end,

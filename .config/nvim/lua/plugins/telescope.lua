@@ -109,6 +109,7 @@ return {
         vim.keymap.set('n', '<space>j', '<cmd>Telescope jumplist<cr>')
         vim.keymap.set('n', '<space>k', '<cmd>Telescope keymaps<cr>')
         vim.keymap.set('n', '<space>l', '<cmd>Telescope loclist<cr>')
+        vim.keymap.set('n', '<space>m', '<cmd>Telescope man_pages<cr>')
         vim.keymap.set('n', '<space>q', '<cmd>Telescope quickfix<cr>')
         vim.keymap.set('n', '<space>Q', '<cmd>Telescope quickfixhistory<cr>')
         vim.keymap.set('n', '<space>s/', '<cmd>Telescope live_grep<cr>')

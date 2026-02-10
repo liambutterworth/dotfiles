@@ -3,7 +3,7 @@
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
 - CLI Packages `tmux fish neovim git mysql httpie fd rg sk`
-- LSP Packages `intelephense vscode-langservers-extracted`
+- LSP Packages `intelephense lua-language-server vscode-langservers-extracted`
 
 # Install
 

@@ -7,6 +7,7 @@ return {
         'joosepalviste/nvim-ts-context-commentstring',
         'nvim-treesitter/nvim-treesitter-textobjects',
         'nvim-treesitter/playground',
+        'rrethy/nvim-treesitter-endwise',
     },
 
     config = function()

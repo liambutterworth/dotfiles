@@ -10,10 +10,10 @@ return {
         local autotag = require('nvim-ts-autotag')
 
         autopairs.setup({
-            map_cr = true,
             check_ts = true,
             disable_filetype = { 'TelescopePrompt' },
             disable_in_macro = true,
+            map_cr = true,
         })
 
         autotag.setup({

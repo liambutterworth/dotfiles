@@ -10,7 +10,6 @@ return {
         'hrsh7th/cmp-path',
     },
 
-
     config = function()
         local cmp = require('cmp')
 
@@ -25,18 +24,36 @@ return {
             }),
 
             mapping = {
-                ['<c-h>'] = cmp.mapping.abort(),
-                ['<c-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
-                ['<c-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
                 ['<cr>'] = cmp.mapping(cmp.mapping.confirm()),
                 ['<tab>'] = cmp.mapping(cmp.mapping.select_next_item()),
                 ['<s-tab>'] = cmp.mapping(cmp.mapping.select_prev_item()),
+                ['<c-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4)),
+                ['<c-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
+                ['<c-h>'] = cmp.mapping.abort(),
             },
 
             window = {
                 completion = cmp.config.window.bordered({ border = 'single' }),
                 documentation = cmp.config.window.bordered({ border = 'single' }),
             },
+        })
+
+        cmp.setup.cmdline(':', {
+            mapping = cmp.mapping.preset.cmdline(),
+
+            sources = cmp.config.sources({
+                { name = 'path' },
+            }, {
+                { name = 'cmdline' },
+            })
+        })
+
+        cmp.setup.cmdline('/', {
+            mapping = cmp.mapping.preset.cmdline(),
+
+            sources = {
+                { name = 'buffer' },
+            }
         })
     end,
 }

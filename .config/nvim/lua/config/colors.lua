@@ -1,4 +1,4 @@
-colors = {
+local colors = {
     none = 'none',
     black = 0,
     red = 1,
@@ -18,7 +18,7 @@ colors = {
     brwhite = 15,
 }
 
-function highlight(name, options)
+local function highlight(name, options)
     if options.fg and not options.ctermfg then
         options.ctermfg = options.fg
     end

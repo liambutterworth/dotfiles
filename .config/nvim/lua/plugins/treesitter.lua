@@ -2,73 +2,39 @@ return {
     'nvim-treesitter/nvim-treesitter',
 
     build = ':TSUpdate',
+    branch = 'main',
+    lazy = false,
 
     dependencies = {
         'joosepalviste/nvim-ts-context-commentstring',
-        'nvim-treesitter/nvim-treesitter-textobjects',
-        'nvim-treesitter/playground',
         'rrethy/nvim-treesitter-endwise',
     },
 
-    config = function()
-        local treesitter = require('nvim-treesitter.configs')
-        local parsers = require('nvim-treesitter.parsers')
-        local parser_config = parsers.get_parser_configs()
+    config = function ()
+        local treesitter = require('nvim-treesitter')
+        local ts_context_commentstring = require('ts_context_commentstring')
 
-        vim.keymap.set('n', '<f10>', '<cmd>TSHighlightCapturesUnderCursor<cr>')
-
-        parser_config.blade = {
-            install_info = {
-                url = 'https://github.com/EmranMR/tree-sitter-blade',
-                files = { 'src/parser.c' },
-                branch = 'main',
-            },
-
-            filetype = 'blade'
+        local filetypes = {
+            'php',
+            'lua',
+            'javascript',
+            'vue',
+            'html',
+            'css',
         }
 
-        treesitter.setup {
-            highlight = {
-                enable = true,
-            },
+        treesitter.install(filetypes)
+        ts_context_commentstring.setup()
 
-            indent = {
-                enable = true,
-            },
+        vim.g.no_plugin_maps = true
 
-            autopairs = {
-                enable = true,
-            },
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = filetypes,
 
-            endwise = {
-                enable = true,
-            },
-
-            textobjects = {
-                select = {
-                    enable = true,
-                    lookahead = true,
-
-                    keymaps = {
-                        ['ab'] = '@block.outer',
-                        ['ib'] = '@block.inner',
-                        ['af'] = '@function.outer',
-                        ['if'] = '@function.inner',
-                        ['ac'] = '@conditional.outer',
-                        ['ic'] = '@conditional.inner',
-                        ['aC'] = '@class.outer',
-                        ['iC'] = '@class.inner',
-                        ['al'] = '@loop.outer',
-                        ['il'] = '@loop.inner',
-                        ['aa'] = '@parameter.outer',
-                        ['ia'] = '@paramter.inner',
-                    },
-                },
-            },
-        }
-
-        require('ts_context_commentstring').setup({
-          enable_autocmd = false,
+            callback = function()
+                vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
+                vim.treesitter.start()
+            end,
         })
     end,
 }

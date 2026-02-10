@@ -9,6 +9,9 @@ return {
         local autopairs = require('nvim-autopairs')
         local autotag = require('nvim-ts-autotag')
 
+        vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
+        vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
+
         autopairs.setup({
             check_ts = true,
             disable_filetype = { 'TelescopePrompt' },
@@ -28,8 +31,5 @@ return {
                 }
             }
         })
-
-        vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
-        vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
     end,
 }

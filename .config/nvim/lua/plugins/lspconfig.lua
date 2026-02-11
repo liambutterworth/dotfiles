@@ -15,14 +15,8 @@ return {
 
         require('mason-lspconfig').setup({
             ensure_installed = {
-                'cssls',
-                'html',
-                'intelephense',
-                'jsonls',
-                'lua_ls',
-                'sqlls',
-                'vtsls',
-                'vue_ls',
+                'cssls', 'html', 'intelephense', 'jsonls',
+                'lua_ls', 'sqlls', 'vtsls', 'vue_ls',
             },
         })
 
@@ -50,26 +44,22 @@ return {
 
         vim.lsp.config('lua_ls', {
             on_init = function(client)
-                local config = {
-                    runtime = {
-                        version = 'LuaJIT',
-
-                        path = {
-                            'lua/?.lua',
-                            'lua/?/init.lua',
-                        },
-                    },
-
-                    workspace = {
-                        checkThirdParty = false,
-                        library = { vim.env.VIMRUNTIME },
-                    },
-                }
-
                 client.config.settings.Lua = vim.tbl_deep_extend(
-                    'force',
-                    client.config.settings.Lua,
-                    config
+                    'force', client.config.settings.Lua, {
+                        runtime = {
+                            version = 'LuaJIT',
+
+                            path = {
+                                'lua/?.lua',
+                                'lua/?/init.lua',
+                            },
+                        },
+
+                        workspace = {
+                            checkThirdParty = false,
+                            library = { vim.env.VIMRUNTIME },
+                        },
+                    }
                 )
             end,
 

@@ -3,14 +3,12 @@ local repo = 'https://github.com/folke/lazy.nvim.git'
 
 vim.opt.rtp:prepend(path)
 
-if not vim.uv.fs_stat(path) then
+if not vim.fn.filereadable(path) then
     local output = vim.fn.system({
-        'git',
-        'clone',
+        'git', 'clone',
         '--filter=blob:none',
         '--branch=stable',
-        repo,
-        path,
+        repo, path,
     })
 
     if vim.v.shell_error ~= 0 then

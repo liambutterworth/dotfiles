@@ -24,5 +24,5 @@ set -x SKIM_DEFAULT_OPTIONS (string join ' ' -- \
 )
 
 set -x SKIM_ALT_C_COMMAND 'fd --type directory'
-set -x SKIM_CTRL_T_COMMAND 'fd'
+set -x SKIM_CTRL_T_COMMAND 'fd --type file'
 set -x SKIM_TMUX_OPTS '80%,80%'

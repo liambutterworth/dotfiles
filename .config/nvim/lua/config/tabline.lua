@@ -25,7 +25,7 @@ function GetTabLine()
 
         if next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.ERROR })) then
             table.insert(tabline, '%#TabLineHasErrors# ')
-        elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.INFO })) then
+        elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.HINT })) then
             table.insert(tabline, '%#TabLineHasInformation# ')
         elseif next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.INFO })) then
             table.insert(tabline, '%#TabLineHasInformation# ')

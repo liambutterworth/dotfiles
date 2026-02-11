@@ -1,8 +1,8 @@
 # Dependencies
 
-- [Alacritty](https://github.com/alacritty/alacritty)
-- [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
-- `tmux fish neovim git mysql httpie fd rg sk`
+[Alacritty Terminal](https://github.com/alacritty/alacritty)
+[Sauce Code Pro Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+`tmux fish neovim git mysql httpie fd rg sk`
 
 # Install
 

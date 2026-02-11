@@ -113,7 +113,7 @@ key = "Space"
 mods = "Control"
 
 [mouse]
-hide_when_typing = false
+hide_when_typing = true
 
 [window]
 dynamic_padding = true

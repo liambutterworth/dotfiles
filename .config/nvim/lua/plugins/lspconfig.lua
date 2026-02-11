@@ -7,42 +7,22 @@ return {
     },
 
     config = function()
-        local mason = require('mason')
-        local mason_lspconfig = require('mason-lspconfig')
-
-        local vue_filetypes = {
-            'typescript',
-            'javascript',
-            'javascriptreact',
-            'typescript',
-            'vue',
-        }
-
-        local vue_plugin = {
-            name = '@vue/typescript-plugin',
-            languages = { 'vue' },
-            configNamespace = 'typescript',
-
-            location = vim.fn.expand(
-                '$MASON/packages' ..
-                '/vue-language-server' ..
-                '/node_modules/@vue/language-server'
-            )
-        }
-
-        mason.setup({
+        require('mason').setup({
             ui = {
                 border = 'single',
             },
         })
 
-        mason_lspconfig.setup({
+        require('mason-lspconfig').setup({
             ensure_installed = {
                 'cssls',
                 'html',
                 'intelephense',
                 'jsonls',
                 'lua_ls',
+                'sqlls',
+                'ts_ls',
+                'vtsls',
                 'vue_ls',
             },
         })
@@ -71,7 +51,7 @@ return {
 
         vim.lsp.config('lua_ls', {
             on_init = function(client)
-                client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+                local config = {
                     runtime = {
                         version = 'LuaJIT',
 
@@ -83,12 +63,15 @@ return {
 
                     workspace = {
                         checkThirdParty = false,
-
-                        library = {
-                            vim.env.VIMRUNTIME,
-                        },
+                        library = { vim.env.VIMRUNTIME },
                     },
-                })
+                }
+
+                client.config.settings.Lua = vim.tbl_deep_extend(
+                    'force',
+                    client.config.settings.Lua,
+                    config
+                )
             end,
 
             settings = {
@@ -100,24 +83,40 @@ return {
             },
         })
 
+        vim.lsp.config('sqlls', {
+            settings = {
+                sqlLanguageServer = {
+                    lint = {
+                        rules = {}
+                    },
+                },
+            },
+        })
+
         vim.lsp.config('vtsls', {
             settings = {
                 vtsls = {
                     tsserver = {
-                        globalPlugins = { vue_plugin },
+                        globalPlugins = {
+                            {
+                                name = '@vue/typescript-plugin',
+                                languages = { 'vue' },
+                                configNamespace = 'typescript',
+
+                                location = vim.fn.stdpath('data')
+                                    .. '/mason/packages/vue-language-server'
+                                    .. '/node_modules/@vue/language-server'
+                            },
+                        },
                     },
                 },
             },
 
-            filetypes = vue_filetypes,
-        })
-
-        vim.lsp.config('vue_ls', {
-            init_options = {
-                plugins = { vue_plugin },
+            filetypes = {
+                'javascript',
+                'typescript',
+                'vue',
             },
-
-            filetypes = vue_filetypes,
         })
     end,
 }

@@ -11,25 +11,20 @@ return {
     },
 
     config = function ()
-        local treesitter = require('nvim-treesitter')
-        local ts_context_commentstring = require('ts_context_commentstring')
+        require('nvim-treesitter').install({
+            'bash', 'lua', 'php', 'sql', 'css', 'html', 'javascript', 'vue',
+        })
 
-        local filetypes = {
-            'php',
-            'lua',
-            'javascript',
-            'vue',
-            'html',
-            'css',
-        }
+        require('ts_context_commentstring').setup()
 
-        treesitter.install(filetypes)
-        ts_context_commentstring.setup()
-
-        vim.g.no_plugin_maps = true
+        vim.filetype.add({
+            pattern = {
+                ['.env.*'] = 'bash',
+            },
+        })
 
         vim.api.nvim_create_autocmd('FileType', {
-            pattern = filetypes,
+            pattern = { 'sql', 'lua', 'php', 'html', 'css', 'javascript', 'vue' },
 
             callback = function()
                 vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"

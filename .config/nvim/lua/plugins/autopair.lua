@@ -6,20 +6,14 @@ return {
     },
 
     config = function()
-        local autopairs = require('nvim-autopairs')
-        local autotag = require('nvim-ts-autotag')
-
-        vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
-        vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
-
-        autopairs.setup({
+        require('nvim-autopairs').setup({
             check_ts = true,
             disable_filetype = { 'TelescopePrompt' },
             disable_in_macro = true,
             map_cr = true,
         })
 
-        autotag.setup({
+        require('nvim-ts-autotag').setup({
             opts = {
                 enable_close_on_slash = true,
             },
@@ -31,5 +25,8 @@ return {
                 }
             }
         })
+
+        vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
+        vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
     end,
 }

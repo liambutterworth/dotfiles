@@ -21,7 +21,6 @@ return {
                 'jsonls',
                 'lua_ls',
                 'sqlls',
-                'ts_ls',
                 'vtsls',
                 'vue_ls',
             },

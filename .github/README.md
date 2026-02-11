@@ -2,7 +2,7 @@
 
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts)
-- Packages `tmux fish neovim git mysql httpie fd rg sk`
+- `tmux fish neovim git mysql httpie fd rg sk`
 
 # Install
 

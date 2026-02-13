@@ -12,7 +12,7 @@ return {
 
     config = function ()
         require('nvim-treesitter').install({
-            'bash', 'css', 'html', 'javascript',
+            'bash', 'css', 'fish', 'html', 'javascript',
             'lua', 'php', 'sql', 'vue',
         })
 
@@ -26,7 +26,7 @@ return {
 
         vim.api.nvim_create_autocmd('FileType', {
             pattern = {
-                'css', 'html', 'javascript',
+                'css', 'fish', 'html', 'javascript',
                 'lua', 'php', 'sql', 'vue',
             },
 

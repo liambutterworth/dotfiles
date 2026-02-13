@@ -1,3 +1,4 @@
+alias reload="exec fish"
 alias config="cd $XDG_CONFIG_HOME"
 alias cache="cd $XDG_CACHE_HOME"
 alias data="cd $XDG_DATA_HOME"

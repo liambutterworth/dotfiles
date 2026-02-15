@@ -1,9 +1,10 @@
+abbr -a -- - 'cd -'
 alias reload="exec fish"
 alias config="cd $XDG_CONFIG_HOME"
 alias cache="cd $XDG_CACHE_HOME"
 alias data="cd $XDG_DATA_HOME"
 alias state="cd $XDG_STATE_HOME"
-alias rg="rg --colors 'path:fg:blue' --colors 'line:fg:magenta'"
+alias rg="rg --color=always --colors 'path:fg:blue' --colors 'line:fg:magenta'"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias http="http --pretty=all"
 alias https="https --pretty=all"

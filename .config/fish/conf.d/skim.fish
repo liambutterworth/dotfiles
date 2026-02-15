@@ -23,6 +23,6 @@ set -x SKIM_DEFAULT_OPTIONS (string join ' ' -- \
     "--multi-selector='+'"
 )
 
-set -x SKIM_ALT_C_COMMAND 'fd --type directory'
-set -x SKIM_CTRL_T_COMMAND 'fd --type file'
+set -x SKIM_ALT_C_COMMAND 'fd --color=never --type directory'
+set -x SKIM_CTRL_T_COMMAND 'fd --color=never --type file'
 set -x SKIM_TMUX_OPTS '80%,80%'

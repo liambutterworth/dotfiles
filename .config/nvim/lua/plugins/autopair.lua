@@ -28,5 +28,6 @@ return {
 
         vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
         vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
+        vim.keymap.set('i', '<c-e>/', '<space><esc>m`A /><esc>``s')
     end,
 }

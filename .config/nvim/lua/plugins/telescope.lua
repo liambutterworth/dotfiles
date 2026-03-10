@@ -91,6 +91,7 @@ return {
         telescope.load_extension('file_browser')
 
         vim.keymap.set('n', '<space><space>', '<cmd>Telescope find_files<cr>')
+        vim.keymap.set('n', '<space><cr>', '<cmd>Telescope find_files cwd=%:p:h<cr>')
         vim.keymap.set('n', '<space><bs>', '<cmd>Telescope buffers<cr>')
         vim.keymap.set('n', '<space>\\', '<cmd>Telescope resume<cr>')
         vim.keymap.set('n', '<space>[', '<cmd>Telescope file_browser<cr>')

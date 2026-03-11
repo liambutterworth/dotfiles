@@ -13,7 +13,7 @@ return {
     config = function ()
         require('nvim-treesitter').install({
             'bash', 'css', 'fish', 'html', 'javascript',
-            'lua', 'php', 'sql', 'vue',
+            'lua', 'blade', 'php', 'sql', 'vue',
         })
 
         require('ts_context_commentstring').setup()

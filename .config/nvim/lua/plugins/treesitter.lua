@@ -27,7 +27,7 @@ return {
         vim.api.nvim_create_autocmd('FileType', {
             pattern = {
                 'css', 'fish', 'html', 'javascript',
-                'lua', 'php', 'sql', 'vue',
+                'lua', 'blade', 'php', 'sql', 'vue',
             },
 
             callback = function()

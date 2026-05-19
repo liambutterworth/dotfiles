@@ -493,9 +493,29 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    {
+        rule = { instance = "Toolkit", name = "Picture-in-Picture" },
+        properties = {
+            floating = true,
+            ontop = true,
+            skip_taskbar = true,
+            titlebars_enabled = false,
+            placement = awful.placement.no_offscreen
+        }
+    },
+
+    {
+        rule = {
+            class = "Stalonetray",
+        },
+
+        properties = {
+            floating = true,
+            skip_taskbar = true,
+            sticky = true,
+            titlebars_enabled = false,
+        }
+    },
 }
 -- }}}
 
@@ -562,3 +582,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Ensure dark mode is set for all apps
+awful.spawn.with_shell('gsettings set org.gnome.desktop.interface color-scheme prefer-dark')

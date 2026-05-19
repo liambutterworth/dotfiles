@@ -66,7 +66,7 @@ render_timer = false
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 14
 
 [font.bold]
 family = "SauceCodePro Nerd Font"

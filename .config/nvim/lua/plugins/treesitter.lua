@@ -11,10 +11,10 @@ return {
     },
 
     config = function ()
-        require('nvim-treesitter').install({
-            'bash', 'css', 'fish', 'html', 'javascript',
-            'lua', 'blade', 'php', 'sql', 'vue',
-        })
+        -- require('nvim-treesitter').install({
+        --     'bash', 'css', 'fish', 'html', 'javascript',
+        --     'lua', 'blade', 'php', 'sql', 'vue',
+        -- })
 
         require('ts_context_commentstring').setup()
 
@@ -24,16 +24,16 @@ return {
             },
         })
 
-        vim.api.nvim_create_autocmd('FileType', {
-            pattern = {
-                'css', 'fish', 'html', 'javascript',
-                'lua', 'blade', 'php', 'sql', 'vue',
-            },
+        -- vim.api.nvim_create_autocmd('FileType', {
+        --     pattern = {
+        --         'css', 'fish', 'html', 'javascript',
+        --         'lua', 'blade', 'php', 'sql', 'vue',
+        --     },
 
-            callback = function()
-                vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
-                vim.treesitter.start()
-            end,
-        })
+        --     callback = function()
+        --         vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
+        --         vim.treesitter.start()
+        --     end,
+        -- })
     end,
 }

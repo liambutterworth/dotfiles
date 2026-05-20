@@ -158,6 +158,10 @@ awful.screen.connect_for_each_screen(function(screen)
 
     awful.tag(tags, screen, awful.layout.layouts[1])
 
+    for _, tile in ipairs(screen.tags) do
+        tile.gap = 8
+    end
+
     screen.layoutbox:buttons(
         gears.table.join(
             awful.button({}, 1, function () awful.layout.inc( 1) end),
@@ -629,6 +633,10 @@ client.connect_signal('manage', function (client)
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
 
+    client.shape = function (context, width, height)
+        gears.shape.rounded_rect(context, width, height, 4)
+    end
+
     if awesome.startup
       and not client.size_hints.user_position
       and not client.size_hints.program_position then
@@ -651,5 +659,5 @@ client.connect_signal('unfocus', function(client)
 end)
 -- }}}
 
--- Ensure dark mode is set for all apps
 awful.spawn.with_shell('gsettings set org.gnome.desktop.interface color-scheme prefer-dark')
+awful.spawn.with_shell('picom')

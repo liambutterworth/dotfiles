@@ -7,6 +7,7 @@ local xresources = require('beautiful.xresources')
 local filesystem = require('gears.filesystem')
 local themes_path = filesystem.get_themes_dir()
 local share_path = filesystem.get_xdg_data_home()
+local config_path = filesystem.get_configuration_dir()
 local dpi = xresources.apply_dpi
 local theme = {}
 
@@ -25,6 +26,8 @@ theme.border_width = dpi(1)
 theme.border_normal = '#000000'
 theme.border_focus = '#535d6c'
 theme.border_marked = '#91231c'
+-- theme.tasklist_plain_task_name = true
+theme.tasklist_disable_task_name = true
 
 -- There are other variable sets
 -- overriding the default one when
@@ -109,12 +112,14 @@ theme.layout_cornerne = themes_path .. 'default/layouts/cornernew.png'
 theme.layout_cornersw = themes_path .. 'default/layouts/cornersww.png'
 theme.layout_cornerse = themes_path .. 'default/layouts/cornersew.png'
 
+theme.awesome_icon = config_path .. 'theme/arch-linux.png'
+
 -- Generate Awesome icon:
-theme.awesome_icon = theme_assets.awesome_icon(
-    theme.menu_height,
-    theme.bg_focus,
-    theme.fg_focus
-)
+-- theme.awesome_icon = theme_assets.awesome_icon(
+--     theme.menu_height,
+--     theme.bg_focus,
+--     theme.fg_focus
+-- )
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.

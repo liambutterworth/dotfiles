@@ -11,3 +11,8 @@ alias http="http --pretty=all"
 alias https="https --pretty=all"
 alias less="less -R"
 alias fuck="sudo !!"
+
+if test (uname) = "Linux"
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+end

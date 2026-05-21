@@ -117,7 +117,7 @@ hide_when_typing = true
 
 [window]
 dynamic_padding = true
-opacity = 0.88
+opacity = 0.92
 option_as_alt = "Both"
 
 [window.padding]

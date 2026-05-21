@@ -140,6 +140,7 @@ awful.screen.connect_for_each_screen(function(screen)
         position = 'top',
         screen = screen,
         height = 32,
+        bg = beautiful.bg_normal .. 'e8',
     })
 
     set_wallpaper(screen)
@@ -379,12 +380,12 @@ local client_keys = gears.table.join(
         group = 'client',
     }),
 
-    -- awful.key({ modkey, 'Control' }, 'Return', function(client)
-    --     client:swap(awful.client.getmaster())
-    -- end, {
-    --     description = 'move to master',
-    --     group = 'client',
-    -- }),
+    awful.key({ modkey, 'Control' }, 'Return', function(client)
+        client:swap(awful.client.getmaster())
+    end, {
+        description = 'move to master',
+        group = 'client',
+    }),
 
     -- awful.key({ modkey }, 'o', function(client)
     --     client:move_to_screen()
@@ -431,7 +432,31 @@ local client_keys = gears.table.join(
     end, {
         description = '(un)maximize horizontally',
         group = 'client',
-    })
+    }),
+
+    awful.key({}, 'XF86AudioPlay', function()
+        awful.util.spawn('playerctl --player playerctld play-pause')
+    end),
+
+    awful.key({}, 'XF86AudioNext', function()
+        awful.util.spawn('playerctl next')
+    end),
+
+    awful.key({}, 'XF86AudioPrev', function()
+        awful.util.spawn('playerctl previous')
+    end),
+
+    awful.key({}, 'XF86AudioRaiseVolume', function()
+        awful.util.spawn('wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+')
+    end),
+
+    awful.key({}, 'XF86AudioLowerVolume', function()
+        awful.util.spawn('wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-')
+    end),
+
+    awful.key({}, 'XF86AudioMute', function()
+        awful.util.spawn('wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle')
+    end)
 )
 
 -- Bind all key numbers to tags.
@@ -572,4 +597,5 @@ end)
 -- }}}
 
 awful.spawn.with_shell('gsettings set org.gnome.desktop.interface color-scheme prefer-dark')
+awful.spawn.with_shell('gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"')
 awful.spawn.with_shell('picom')

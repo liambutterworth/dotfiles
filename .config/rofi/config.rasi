@@ -1,71 +1,49 @@
+configuration {
+    modi: "drun,run,window";
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+}
+
 * {
-    bg-dim: #181616;
-    bg0: #1a181a;
-    bg1: #221f22;
-    bg2: #2d2b30;
-    fg0: #c5c9c5;
-    fg1: #8b94a0;
-    accent: #c4746e;
-    urgent: #e46876;
+    black: #0d0c0c;
+    blue: #8ba4b0;
+    cyan: #8ea4a2;
+    green: #8a9a7b;
+    magenta: #a292a3;
+    red: #c4746e;
+    white: #c8c093;
+    yellow: #c4b28a;
+    bright-black: #a6a69c;
+    bright-blue: #7fb4ca;
+    bright-cyan: #7aa89f;
+    bright-green: #87a987;
+    bright-magenta: #938aa9;
+    bright-red: #e46876;
+    bright-white: #c5c9c5;
+    bright-yellow: #e6c384;
+    background: #0d0c0caa;
     background-color: transparent;
-    text-color: @fg0;
-    font: "SauceCodePro Nerd Font 12";
+    text-color: @bright-white;
+    font: 'SauceCodePro Light 16';
 }
 
 window {
-    location: center;
-    width: 600;
-    border-radius: 8px;
-    background-color: @bg0;
-    border: 1px;
-    border-color: @bg2;
+    background-color: @background;
+    padding: 32 16;
+    border-radius: 2px;
 }
 
-mainbox {
-    padding: 15px;
-    background-color: @bg-dim;
+element-icon {
+    size: 18;
+    border: 0;
 }
 
-inputbar {
-    padding: 10px;
-    border-radius: 6px;
-    background-color: @bg1;
-}
-
-prompt {
-    enabled: true;
-    padding: 0px 10px 0px 0px;
-    text-color: @accent;
-}
-
-entry {
-    placeholder: "Search applications...";
-    placeholder-color: @fg1;
-    text-color: @fg0;
-}
-
-listview {
-    lines: 8;
-    columns: 1;
-    padding: 10px 0px 0px 0px;
+element.alternate.normal {
     background-color: transparent;
+    text-color: inherit;
 }
 
-element {
-    padding: 8px;
-    border-radius: 6px;
+element.normal.normal {
     background-color: transparent;
-}
-
-element normal.normal {
-    background-color: transparent;
-}
-
-element selected.normal {
-    background-color: @bg1;
-    text-color: @accent;
-}
-
-element alternate.normal {
-    background-color: transparent;
+    text-color: inherit;
 }

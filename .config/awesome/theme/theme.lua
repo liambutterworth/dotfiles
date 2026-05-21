@@ -5,8 +5,8 @@
 -- local theme_assets = require('beautiful.theme_assets')
 -- local xresources = require('beautiful.xresources')
 local filesystem = require('gears.filesystem')
-local themes_path = filesystem.get_themes_dir()
-local share_path = filesystem.get_xdg_data_home()
+-- local themes_path = filesystem.get_themes_dir()
+-- local share_path = filesystem.get_xdg_data_home()
 local config_path = filesystem.get_configuration_dir()
 -- local dpi = xresources.apply_dpi
 local theme = {}

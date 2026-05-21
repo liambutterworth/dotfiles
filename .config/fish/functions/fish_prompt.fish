@@ -19,7 +19,7 @@ function fish_prompt
     printf '%s %s\n%s ' \
         (set_color -o blue)"$directory" \
         (set_color -o brblack)"$branch" \
-        (set_color -o magenta)"$character"
+        (set_color -o brmagenta)"$character"
 
     set_color normal
 end

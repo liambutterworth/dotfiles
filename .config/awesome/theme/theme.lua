@@ -60,8 +60,8 @@ theme.fg_urgent = '#ffffff'
 theme.fg_minimize = '#4c566a'
 
 theme.border_width = 1
-theme.border_normal = '#000000'
-theme.border_focus = '#ebcb8b'
+theme.border_normal = '#0d0c0c'
+theme.border_focus = '#c8c093'
 theme.border_marked = '#91231c'
 
 theme.taglist_fg_focus = theme.bright_white

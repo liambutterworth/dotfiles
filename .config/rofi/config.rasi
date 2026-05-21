@@ -1,0 +1,71 @@
+* {
+    bg-dim: #181616;
+    bg0: #1a181a;
+    bg1: #221f22;
+    bg2: #2d2b30;
+    fg0: #c5c9c5;
+    fg1: #8b94a0;
+    accent: #c4746e;
+    urgent: #e46876;
+    background-color: transparent;
+    text-color: @fg0;
+    font: "SauceCodePro Nerd Font 12";
+}
+
+window {
+    location: center;
+    width: 600;
+    border-radius: 8px;
+    background-color: @bg0;
+    border: 1px;
+    border-color: @bg2;
+}
+
+mainbox {
+    padding: 15px;
+    background-color: @bg-dim;
+}
+
+inputbar {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: @bg1;
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 10px 0px 0px;
+    text-color: @accent;
+}
+
+entry {
+    placeholder: "Search applications...";
+    placeholder-color: @fg1;
+    text-color: @fg0;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    padding: 10px 0px 0px 0px;
+    background-color: transparent;
+}
+
+element {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @bg1;
+    text-color: @accent;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}

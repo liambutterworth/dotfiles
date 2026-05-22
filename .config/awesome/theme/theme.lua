@@ -11,24 +11,6 @@ local config_path = filesystem.get_configuration_dir()
 -- local dpi = xresources.apply_dpi
 local theme = {}
 
--- -- nord
--- theme.black = "#373e4d"
--- theme.red = "#94545d"
--- theme.green = "#809575"
--- theme.yellow = "#b29e75"
--- theme.blue = "#68809a"
--- theme.magenta = "#8c738c"
--- theme.cyan = "#6d96a5"
--- theme.white = "#aeb3bb"
--- theme.bright_black = "#616e88"
--- theme.bright_red = "#bf616a"
--- theme.bright_green = "#a3be8c"
--- theme.bright_yellow = "#ebcb8b"
--- theme.bright_blue = "#81a1c1"
--- theme.bright_magenta = "#b48ead"
--- theme.bright_cyan = "#8fbcbb"
--- theme.bright_white = "#eceff4"
-
 -- tomorrow night
 theme.transparent = '#00000000'
 theme.black = "#1d1f21"
@@ -39,7 +21,7 @@ theme.blue = "#81a2be"
 theme.magenta = "#b294bb"
 theme.cyan = "#8abeb7"
 theme.white = "#c8c093"
-theme.bright_black = "#666666"
+theme.bright_black = "#727169"
 theme.bright_red = "#d54e53"
 theme.bright_green = "#b9ca4a"
 theme.bright_yellow = "#e7c547"

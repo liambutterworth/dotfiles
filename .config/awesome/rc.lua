@@ -156,49 +156,60 @@ awful.screen.connect_for_each_screen(function(screen)
         )
     )
 
-    local spacing = 8
-    local margin = 4
-    local date = wibox.widget.textclock('%a %b %d')
-    local time = wibox.widget.textclock('%H:%M')
-    local calendar_icon = wibox.widget.imagebox()
-    local clock_icon = wibox.widget.imagebox()
     local config_path = gears.filesystem.get_configuration_dir()
 
+    local date_container = wibox.widget.background()
+    date_container:set_widget(wibox.widget.textclock('%a %b %d'))
+    date_container:set_fg(beautiful.white)
+
+    local time_container = wibox.widget.background()
+    time_container:set_widget(wibox.widget.textclock('%H:%M'))
+    time_container:set_fg(beautiful.magenta)
+
+    local clock_icon = wibox.widget.imagebox()
     clock_icon:set_image(config_path .. 'icons/clock.png')
+
+    local calendar_icon = wibox.widget.imagebox()
     calendar_icon:set_image(config_path .. 'icons/calendar.png')
 
     screen.wibar:setup({
+        margins = 4,
+        widget = wibox.container.margin,
+
         {
             layout = wibox.layout.align.horizontal,
 
             {
                 layout = wibox.layout.fixed.horizontal,
-                spacing = spacing,
+                spacing = 6,
                 launcher,
                 screen.taglist,
                 screen.prompt,
             },
 
-            {
-                widget = wibox.widget.textbox,
-            },
+            nil, -- spacer
 
             {
                 layout = wibox.layout.fixed.horizontal,
-                spacing = spacing,
-                calendar_icon,
-                date,
-                clock_icon,
-                time,
+                spacing = 12,
+
+                {
+                    layout = wibox.layout.fixed.horizontal,
+                    spacing = 6,
+                    calendar_icon,
+                    date_container,
+                },
+
+                {
+                    layout = wibox.layout.fixed.horizontal,
+                    spacing = 6,
+                    clock_icon,
+                    time_container,
+                },
+
                 screen.layoutbox,
             },
         },
-
-        top = margin,
-        bottom = margin,
-        left = margin,
-        right = margin,
-        widget = wibox.container.margin,
     })
 end)
 

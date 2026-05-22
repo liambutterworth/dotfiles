@@ -30,6 +30,7 @@ local theme = {}
 -- theme.bright_white = "#eceff4"
 
 -- tomorrow night
+theme.transparent = '#00000000'
 theme.black = "#1d1f21"
 theme.red = "#cc6666"
 theme.green = "#b5bd68"
@@ -37,7 +38,7 @@ theme.yellow = "#f0c674"
 theme.blue = "#81a2be"
 theme.magenta = "#b294bb"
 theme.cyan = "#8abeb7"
-theme.white = "#373b41"
+theme.white = "#c8c093"
 theme.bright_black = "#666666"
 theme.bright_red = "#d54e53"
 theme.bright_green = "#b9ca4a"
@@ -68,7 +69,7 @@ theme.taglist_fg_focus = theme.bright_white
 theme.taglist_fg_empty = theme.bright_black
 theme.taglist_fg_urgent = theme.yellow
 theme.taglist_fg_volatile = theme.red
-theme.taglist_bg_focus = theme.black
+theme.taglist_bg_focus = theme.transparent
 theme.taglist_bg_urgent = theme.black
 
 theme.useless_gap = 4

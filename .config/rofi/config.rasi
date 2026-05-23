@@ -33,6 +33,10 @@ window {
     border-radius: 2px;
 }
 
+element {
+    spacing: 8;
+}
+
 element-icon {
     size: 18;
     border: 0;

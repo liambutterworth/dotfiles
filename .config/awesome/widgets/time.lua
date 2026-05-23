@@ -8,7 +8,7 @@ return wibox.widget({
 
     {
         layout = wibox.layout.fixed.horizontal,
-        spacing = 4,
+        spacing = 5,
 
         {
             widget = wibox.widget.imagebox,

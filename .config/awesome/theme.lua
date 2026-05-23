@@ -23,7 +23,6 @@ local palette = {
 }
 
 beautiful.init({
-    palette = palette,
     font = 'SauceCodePro 10, sans 10',
     bg_normal = palette.black,
     bg_focus = '#535d6c',
@@ -44,8 +43,9 @@ beautiful.init({
     taglist_bg_focus = palette.transparent,
     taglist_bg_urgent = palette.black,
     useless_gap = 4,
-    awesome_icon = config_path .. 'icons/arch-linux.png',
+    palette = palette,
     wallpaper = config_path .. 'wallpapers/mountains.jpg',
+    awesome_icon = config_path .. 'icons/arch.png',
     layout_fairh = config_path .. 'icons/fairhw.png',
     layout_fairv = config_path .. 'icons/fairvw.png',
     layout_floating = config_path .. 'icons/floatingw.png',

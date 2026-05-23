@@ -12,7 +12,7 @@ return wibox.widget({
 
         {
             widget = wibox.widget.imagebox,
-            image = filesystem.get_configuration_dir() .. 'icons/clock.png',
+            image = filesystem.get_configuration_dir() .. 'icons/calendar.png',
         },
 
         {

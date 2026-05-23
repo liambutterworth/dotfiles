@@ -1,4 +1,5 @@
 require('bootstrap')
+require('notifications')
 require('globals')
 require('layouts')
 require('screens')

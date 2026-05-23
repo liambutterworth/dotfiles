@@ -1,10 +1,8 @@
 local wibox = require('wibox')
-local theme = require('theme')
 local filesystem = require('gears.filesystem')
 
 return wibox.widget({
     widget = wibox.container.background,
-    fg = theme.palette.magenta,
 
     {
         layout = wibox.layout.fixed.horizontal,

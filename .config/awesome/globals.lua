@@ -1,6 +1,8 @@
 local gears = require('gears')
 local awful = require('awful')
 
+local naughty = require('naughty')
+
 local global_keys = gears.table.join(
     awful.key({ 'Mod4' }, 'Tab', function()
         awful.client.focus.history.previous()
@@ -26,6 +28,14 @@ local global_keys = gears.table.join(
     awful.key({ 'Mod4' }, 'k', function() awful.client.focus.byidx(-1) end),
     awful.key({ 'Mod4', 'Shift' }, 'j', function() awful.client.swap.byidx(1) end),
     awful.key({ 'Mod4', 'Shift' }, 'k', function() awful.client.swap.byidx(-1) end),
+
+    awful.key({ 'Mod4' }, 't', function()
+        naughty.notify({
+            title = 'Test Notification',
+            text = 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+            timeout = 100,
+        })
+    end),
 
     awful.key({}, 'XF86AudioPlay', function()
         awful.util.spawn('playerctl --player playerctld play-pause')
@@ -78,6 +88,10 @@ for index = 1, 9 do
                     tag:view_only()
                 end
             end
+        end),
+
+        awful.key({ 'Mod4', 'Control', 'Shift' }, '#' .. index + 9, function()
+            -- TODO swap current tag with number pressed
         end)
     )
 end

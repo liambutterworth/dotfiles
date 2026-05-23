@@ -1,6 +1,7 @@
 pcall(require, 'luarocks.loader')
 
 local awful = require('awful')
+local beautiful = require('beautiful')
 local naughty = require('naughty')
 
 if awesome.startup_errors then
@@ -29,8 +30,7 @@ do
     end)
 end
 
-awful.spawn.with_shell('picom')
-
 require('awful.autofocus')
 
--- awful.spawn.with_shell('gsettings set org.gnome.desktop.interface color-scheme prefer-dark')
+awful.spawn.with_shell('picom')
+beautiful.init(require('theme'))

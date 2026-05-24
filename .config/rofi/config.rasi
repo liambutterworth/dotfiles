@@ -73,8 +73,9 @@ textbox {
 }
 
 listview {
-    lines: 8;
     border: none;
+    lines: 8;
+    require-input: true;
     scrollbar: false;
 }
 

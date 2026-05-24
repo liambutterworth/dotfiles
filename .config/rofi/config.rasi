@@ -22,7 +22,7 @@ configuration {
     bright-red: #e46876;
     bright-white: #c5c9c5;
     bright-yellow: #e6c384;
-    background: #0d0c0caa;
+    background: #0d0c0ce8;
     background-color: transparent;
     text-color: @bright-white;
     font: "SauceCodePro Light 16";
@@ -32,9 +32,8 @@ window {
     background-color: @background;
     border: 0;
     border-radius: 2px;
-    padding: 24px 16px;
+    padding: 24px 24px 12px;
     text-color: @bright-white;
-    transparency: "real";
     width: 512px;
 }
 

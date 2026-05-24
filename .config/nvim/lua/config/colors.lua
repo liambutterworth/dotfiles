@@ -78,7 +78,7 @@ highlight('Todo', { bg = colors.none, fg = colors.yellow })
 highlight('Type', { fg = colors.blue})
 highlight('Underlined', { fg = colors.cyan })
 highlight('VertSplit', { bg = colors.none, fg = colors.black, bold = true })
-highlight('Visual', { bg = colors.black, bold = true })
+highlight('Visual', { bg = colors.bright_black, bold = true })
 highlight('Warning', { fg = colors.yellow, bold = true })
 highlight('WarningMsg', { fg = colors.yellow })
 

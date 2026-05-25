@@ -11,7 +11,7 @@ set -g fish_color_match green
 set -g fish_color_normal bright_white
 set -g fish_color_operator blue
 set -g fish_color_param bright_white
-set -g fish_color_quote yellow
+set -g fish_color_quote white
 set -g fish_color_redirection bright_white
 set -g fish_color_search_match green
 set -g fish_color_user brblack

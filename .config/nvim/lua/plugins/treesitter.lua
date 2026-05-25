@@ -46,6 +46,7 @@ return {
         vim.filetype.add({
             pattern = {
                 ['.env.*'] = 'bash',
+                ['*.ghostty'] = 'dosini',
             },
         })
     end,

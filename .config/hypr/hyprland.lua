@@ -173,7 +173,7 @@ hl.config({
 hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-num-lines'))
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('ghostty'))
-hl.bind('SUPER + Q', hl.dsp.window.kill())
+hl.bind('SUPER + Q', hl.dsp.window.close())
 hl.bind('SUPER + SHIFT + Q', hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind('SUPER + W', function() hl.exec_cmd('killall -q hyprpaper && hyprpaper') end)
 hl.bind('SUPER + R' , function() hl.exec_cmd('killall waybar && waybar') end)

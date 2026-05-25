@@ -25,21 +25,21 @@ window#waybar {
     background-color: transparent;
 }
 
-#custom-launcher {
-    font-size: 20px;
-}
-
 #custom-launcher,
+#custom-poweroff,
+#custom-reboot,
+#custom-suspend,
 #workspaces button,
 .modules-right .module {
     background-color: alpha(@black, 0.8);
     border-radius: 2px;
     padding: 8px 16px;
+    margin-left: 8px;
 }
 
-#workspaces button,
-.modules-right .module {
-    margin-left: 8px;
+#custom-launcher {
+    font-size: 20px;
+    margin-left: 0;
 }
 
 #workspaces button {
@@ -48,8 +48,4 @@ window#waybar {
 
 #workspaces button.active {
     color: @bright-white;
-}
-
-#cpu span {
-    color: @bright-red;
 }

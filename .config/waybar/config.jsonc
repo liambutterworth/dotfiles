@@ -4,14 +4,47 @@
     "margin-top": 8,
     "margin-left": 8,
     "margin-right": 8,
-    "modules-left": ["custom/launcher", "hyprland/workspaces"],
+    "modules-left": ["group/power", "hyprland/workspaces"],
     "modules-center": [],
     "modules-right": ["cpu", "memory", "battery", "clock#date", "clock#time"],
     "reload_style_on_change": true,
 
+    "group/power": {
+        "orientation": "horizontal",
+
+        "drawer": {
+            "click-to-reveal": true,
+            "transition-duration": 500,
+            "children-class": "power-option"
+        },
+
+        "modules": [
+            "custom/launcher",
+            "custom/poweroff",
+            "custom/reboot",
+            "custom/suspend"
+        ]
+    },
+
     "custom/launcher": {
         "format": "<span font='16' rise='-2000'>󰣇</span>",
-        "on-click": "kitty"
+        "cursor": true,
+        "tooltip": false
+    },
+
+    "custom/poweroff": {
+        "format": "<span font='16' rise='-2000'>⏻</span>",
+        "on-click": "systemctl poweroff"
+    },
+
+    "custom/reboot": {
+        "format": "<span font='16' rise='-2000'>󰜉</span>",
+        "on-click": "systemctl reboot"
+    },
+
+    "custom/suspend": {
+        "format": "<span font='16' rise='-2000'>󰒲</span>",
+        "on-click": "systemctl suspend"
     },
 
     "cpu": {

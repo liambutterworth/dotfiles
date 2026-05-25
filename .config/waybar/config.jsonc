@@ -4,13 +4,32 @@
     "margin-top": 8,
     "margin-left": 8,
     "margin-right": 8,
-    "modules-left": ["hyprland/workspaces", "clock"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["cpu", "memory", "battery"],
+    "modules-right": ["cpu", "memory", "battery", "clock#date", "clock#time"],
     "reload_style_on_change": true,
 
-    "clock": {
-        "format": "{:%H:%M}"
+    "custom/launcher": {
+        "format": "<span font='16' rise='-2000'>󰣇</span>",
+        "on-click": "kitty"
+    },
+
+    "cpu": {
+        "format": "<span font='16' rise='-2000'></span> {}%",
+        "interval": 10
+    },
+
+    "memory": {
+        "format": "<span font='16' rise='-2000'></span> {}%",
+        "interval": 10
+    },
+
+    "clock#date": {
+        "format": "<span font='16' rise='-2000'></span> {:%a %b %d}"
+    },
+
+    "clock#time": {
+        "format": "<span font='16' rise='-2000'></span> {:%H:%M}"
     },
 
     "battery": {

@@ -180,7 +180,9 @@ hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-n
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('kitty'))
 hl.bind('SUPER + SHIFT + Q', hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind('SUPER + Q', hl.dsp.window.kill())
+hl.bind('SUPER + W', function() hl.exec_cmd('killall -q hyprpaper && hyprpaper') end)
 hl.bind('SUPER + R' , function() hl.exec_cmd('killall waybar && waybar') end)
+hl.bind('SUPER + SHIFT + R', function() hl.exec_cmd('killall -q waybar && env GTK_DEBUG=interactive waybar') end)
 hl.bind('SUPER + V', hl.dsp.window.float({ action = 'toggle' }))
 hl.bind('SUPER + P', hl.dsp.window.pseudo())
 hl.bind('SUPER + O', hl.dsp.layout('togglesplit'))    -- dwindle only
@@ -211,3 +213,14 @@ hl.bind('XF86AudioNext', hl.dsp.exec_cmd('playerctl next'), { locked = true })
 hl.bind('XF86AudioPause', hl.dsp.exec_cmd('playerctl play-pause'), { locked = true })
 hl.bind('XF86AudioPlay', hl.dsp.exec_cmd('playerctl play-pause'), { locked = true })
 hl.bind('XF86AudioPrev', hl.dsp.exec_cmd('playerctl previous'), { locked = true })
+
+---------------------
+---- RULES ----
+---------------------
+
+hl.layer_rule({
+    name = 'waybar-blur',
+    match = { namespace = 'waybar' },
+    blur = true,
+    ignore_alpha = 0.1,
+})

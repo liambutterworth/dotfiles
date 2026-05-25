@@ -194,6 +194,8 @@ hl.bind('SUPER + SHIFT + L', hl.dsp.window.move({ direction = 'right'}))
 hl.bind('SUPER + BRACKETLEFT', hl.dsp.layout('mfact -0.05'))
 hl.bind('SUPER + BRACKETRIGHT', hl.dsp.layout('mfact +0.05'))
 hl.bind('SUPER + BACKSLASH', hl.dsp.layout('mfact exact 0.5'))
+hl.bind('SUPER + mouse:272', hl.dsp.window.drag(), { mouse = true })
+hl.bind('SUPER + mouse:272', hl.dsp.window.resize(), { mouse = true })
 
 for i = 1, 10 do
     local key = i % 10
@@ -217,8 +219,18 @@ hl.bind('XF86AudioPrev', hl.dsp.exec_cmd('playerctl previous'), { locked = true 
 ---------------------
 
 hl.layer_rule({
-    name = 'waybar-blur',
     match = { namespace = 'waybar' },
+    name = 'waybar-blur',
     blur = true,
     ignore_alpha = 0.1,
+})
+
+hl.window_rule({
+    match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" },
+    float = true,
+    pin = true,
+    -- stayfocused = false,
+    no_blur = true,
+    no_shadow = true,
+    -- keepaspectratio = true,
 })

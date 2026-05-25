@@ -29,7 +29,7 @@
     },
 
     "clock#time": {
-        "format": "<span font='16' rise='-2000'></span> {:%H:%M}"
+        "format": "<span font='16' rise='-2000'></span> {:%I:%M %p}"
     },
 
     "battery": {

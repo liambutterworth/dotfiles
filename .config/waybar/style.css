@@ -1,0 +1,55 @@
+@define-color black #0d0c0c;
+@define-color red #c4746e;
+@define-color green #8a9a7b;
+@define-color yellow #c4b23a;
+@define-color blue #8ba4b0;
+@define-color magenta #a292a3;
+@define-color cyan #7aa89f;
+@define-color white #c8c093;
+@define-color bright-black #727169;
+@define-color bright-red #e46876;
+@define-color bright-green #87a987;
+@define-color bright-yellow #e6c384;
+@define-color bright-bluw #7fb4ca;
+@define-color bright-magenta #938aa9;
+@define-color bright-cyan #a3d4d5;
+@define-color bright-white #c5c9c5;
+
+* {
+    font-family: "SauceCodePro Nerd Font Propo";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#custom-launcher {
+    font-size: 20px;
+}
+
+#custom-launcher,
+#workspaces button,
+.modules-right .module {
+    background-color: alpha(@black, 0.7);
+    border-radius: 2px;
+    padding: 8px 16px;
+}
+
+#workspaces button,
+.modules-right .module {
+    margin-left: 8px;
+}
+
+#workspaces button {
+    color: @bright-black;
+}
+
+#workspaces button.active {
+    color: @bright-white;
+}
+
+#cpu span {
+    color: @bright-red;
+}

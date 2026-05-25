@@ -2,12 +2,6 @@
 ---- MONITORS ----
 ------------------
 
--- local hypr = require('hyprland')
--- hypr.conf.exec_once = {
---     'hyprpaper',
---     'waybar',
--- }
-
 hl.monitor({
     output   = '',
     mode     = 'preferred',
@@ -58,8 +52,8 @@ local colors = {
 hl.config({
     general = {
         layout = 'master',
-        gaps_in  = 7,
-        gaps_out = 7,
+        gaps_in  = 8,
+        gaps_out = 8,
         border_size = 1,
 
         col = {
@@ -176,18 +170,19 @@ hl.config({
 ---- KEYBINDINGS ----
 ---------------------
 
+hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-num-lines'))
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('kitty'))
-hl.bind('SUPER + SHIFT + Q', hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind('SUPER + Q', hl.dsp.window.kill())
+hl.bind('SUPER + SHIFT + Q', hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind('SUPER + W', function() hl.exec_cmd('killall -q hyprpaper && hyprpaper') end)
 hl.bind('SUPER + R' , function() hl.exec_cmd('killall waybar && waybar') end)
 hl.bind('SUPER + SHIFT + R', function() hl.exec_cmd('killall -q waybar && env GTK_DEBUG=interactive waybar') end)
 hl.bind('SUPER + V', hl.dsp.window.float({ action = 'toggle' }))
-hl.bind('SUPER + P', hl.dsp.window.pseudo())
-hl.bind('SUPER + O', hl.dsp.layout('togglesplit'))    -- dwindle only
 hl.bind('SUPER + S', hl.dsp.exec_cmd('hyprshot -m region --clipboard-only'))
-hl.bind('SUPER + M', hl.dsp.window.fullscreen({ action = 'toggle' }))
+hl.bind('SUPER + F', hl.dsp.window.fullscreen({ action = 'toggle' }))
+hl.bind('SUPER + M', hl.dsp.layout('focusmaster master'))
+hl.bind('SUPER + SHIFT + M', hl.dsp.layout('swapwithmaster ignoremaster'))
 hl.bind('SUPER + H', hl.dsp.focus({ direction = 'left' }))
 hl.bind('SUPER + J', hl.dsp.focus({ direction = 'down' }))
 hl.bind('SUPER + K', hl.dsp.focus({ direction = 'up' }))
@@ -196,6 +191,9 @@ hl.bind('SUPER + SHIFT + H', hl.dsp.window.move({ direction = 'left'}))
 hl.bind('SUPER + SHIFT + J', hl.dsp.window.move({ direction = 'down'}))
 hl.bind('SUPER + SHIFT + K', hl.dsp.window.move({ direction = 'up'}))
 hl.bind('SUPER + SHIFT + L', hl.dsp.window.move({ direction = 'right'}))
+hl.bind('SUPER + BRACKETLEFT', hl.dsp.layout('mfact -0.05'))
+hl.bind('SUPER + BRACKETRIGHT', hl.dsp.layout('mfact +0.05'))
+hl.bind('SUPER + BACKSLASH', hl.dsp.layout('mfact exact 0.5'))
 
 for i = 1, 10 do
     local key = i % 10

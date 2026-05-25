@@ -38,12 +38,12 @@
     },
 
     "custom/reboot": {
-        "format": "<span font='16' rise='-2000'>󰜉</span>",
+        "format": "<span font='16' rise='-2000'></span>",
         "on-click": "systemctl reboot"
     },
 
     "custom/suspend": {
-        "format": "<span font='16' rise='-2000'>󰒲</span>",
+        "format": "<span font='16' rise='-2000'></span>",
         "on-click": "systemctl suspend"
     },
 

@@ -14,6 +14,7 @@
     "modules-right": [
         "cpu",
         "memory",
+        "network",
         "battery",
         "custom/date",
         "custom/time"
@@ -72,6 +73,20 @@
         "interval": 10
     },
 
+    "network": {
+        "format": "<span font='16' rise='-2000'>{icon}</span> {ifname}",
+        "format-wifi": "<span font='16' rise='-2000'>{icon}</span> {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "max-length": 50
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
     "custom/date": {
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%a %b %d'",
@@ -82,10 +97,5 @@
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%-I:%M %p'",
         "interval": 1
-    },
-
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
     }
 }

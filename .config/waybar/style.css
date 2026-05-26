@@ -53,6 +53,10 @@ window#waybar {
     color: @bright-black;
 }
 
+#workspaces button.urgent {
+    color: @red;
+}
+
 #workspaces button.active {
     color: @bright-white;
 }

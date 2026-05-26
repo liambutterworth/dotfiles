@@ -1,5 +1,9 @@
 # Dependencies
 
+## Arch
+
+`hyprland hyprpaper hyprshot waybar rofi ghostty`
+
 ## Linux
 
 `fish neovim git fd ripgrep skim ttf-sourcecodepro-nerd`

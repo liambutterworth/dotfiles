@@ -50,7 +50,7 @@
     },
 
     "custom/poweroff": {
-        "format": "<span font='16' rise='-2000'>⏻</span>",
+        "format": "<span font='16' rise='-2000'></span>",
         "on-click": "systemctl poweroff"
     },
 

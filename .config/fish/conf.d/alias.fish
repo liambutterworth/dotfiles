@@ -12,8 +12,3 @@ alias https="https --pretty=all"
 alias reload="exec fish"
 alias less="less -R"
 alias fuck="sudo !!"
-
-if test (uname) = "Linux"
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-end

@@ -71,24 +71,26 @@
 
     "cpu": {
         "format": "<span font='16' rise='-2000'></span> {}%",
+        "on-click": "ghostty -e htop -s PERCENT_CPU",
         "interval": 10
     },
 
     "memory": {
         "format": "<span font='16' rise='-2000'></span> {}%",
+        "on-click": "ghostty -e htop -s PERCENT_MEM",
         "interval": 10
     },
 
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "<span font='16' rise='-2000'>{icon}</span> {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁿", "󰂀", "󰁹"]
     },
 
     "wireplumber": {
         "format": "<span font='16' rise='-2000'>󰕾</span> {volume}%",
         "format-muted": "<span font='16' rise='-2000'>󰖁</span> {volume}%",
-        "on-click": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
-        "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
@@ -104,12 +106,16 @@
     "custom/date": {
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%a %b %d'",
+        "on-click": "date '+%a %b %d' | wl-copy",
+        "on-click-right": "date '+%Y-%m-%d' | wl-copy",
         "interval": 1
     },
 
     "custom/time": {
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%-I:%M %p'",
+        "on-click": "date '+%-I:%M %p' | wl-copy",
+        "on-click-right": "date '+%H:%M' | wl-copy",
         "interval": 1
     }
 }

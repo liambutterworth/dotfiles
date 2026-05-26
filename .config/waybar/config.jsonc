@@ -76,7 +76,7 @@
     "network": {
         "format": "<span font='16' rise='-2000'>{icon}</span> {ifname}",
         "format-wifi": "<span font='16' rise='-2000'>{icon}</span> {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-ethernet": "<span font='16' rise='-2000'>󰈀</span> {ipaddr}/{cidr}",
         "format-disconnected": "",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "max-length": 50

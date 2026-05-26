@@ -33,7 +33,6 @@ function GetStatusLineForBuffer(buffer)
     table.insert(statusline, '%#StatusLineNumber#%L')
     table.insert(statusline, '%#StatusLineOperator#:')
     table.insert(statusline, '%#StatusLineNumber#%c')
-    table.insert(statusline, '%#StatusLineOperator# │')
 
     if next(vim.diagnostic.get(buffer, { severity = vim.diagnostic.severity.ERROR })) then
         table.insert(statusline, '%#StatusLineHasErrors#  ')

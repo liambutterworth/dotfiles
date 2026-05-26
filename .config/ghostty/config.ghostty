@@ -6,6 +6,7 @@ cursor-text = #c7c9c5
 font-size = 16
 foreground = #c5c9c5
 keybind = ctrl+,=unbind
+macos-non-native-fullscreen = visible-menu
 palette = 0=#0d0c0c
 palette = 1=#c4746e
 palette = 2=#8a9a7b

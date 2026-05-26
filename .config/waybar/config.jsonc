@@ -87,7 +87,9 @@
     "wireplumber": {
         "format": "<span font='16' rise='-2000'>󰕾</span> {volume}%",
         "format-muted": "<span font='16' rise='-2000'>󰖁</span> {volume}%",
-        "on-click": "helvum"
+        "on-click": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
     "network": {

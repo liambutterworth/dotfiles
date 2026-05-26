@@ -24,8 +24,10 @@ return {
         vim.keymap.set('n', '<c-}>', vim.lsp.buf.declaration)
         vim.keymap.set('n', 'S', vim.diagnostic.open_float)
         vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({ border = 'single' }) end)
-        vim.keymap.set('n', '[d', function() vim.diagnostic.jump({count= -1,float = true}) end)
-        vim.keymap.set('n', ']d', function() vim.diagnostic.jump({count= 1,float = true}) end)
+        vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count= -1,float = true }) end)
+        vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count= 1,float = true }) end)
+        vim.keymap.set('n', '[D', '<cmd>lsp disable<cr>')
+        vim.keymap.set('n', ']D', '<cmd>lsp enable<cr>')
 
         vim.diagnostic.config({
             float = {

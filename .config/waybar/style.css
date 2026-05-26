@@ -26,9 +26,6 @@ window#waybar {
 }
 
 #custom-launcher,
-#custom-poweroff,
-#custom-reboot,
-#custom-suspend,
 #workspaces button,
 .modules-right .module {
     background-color: alpha(@black, 0.8);
@@ -40,6 +37,13 @@ window#waybar {
 #custom-launcher {
     font-size: 20px;
     margin-left: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+#custom-poweroff,
+#custom-reboot,
+#custom-suspend {
+
 }
 
 #workspaces button {

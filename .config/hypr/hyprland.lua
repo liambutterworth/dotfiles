@@ -1,5 +1,5 @@
 require('lua.animations')
+require('lua.config')
 require('lua.keybinds')
 require('lua.rules')
-require('lua.settings')
 require('lua.start')

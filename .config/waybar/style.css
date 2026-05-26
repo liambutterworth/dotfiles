@@ -25,25 +25,28 @@ window#waybar {
     background-color: transparent;
 }
 
-#custom-launcher,
-#workspaces button,
-.modules-right .module {
+#workspaces button, .modules-right .module {
     background-color: alpha(@black, 0.8);
     border-radius: 2px;
     padding: 8px 16px;
     margin-left: 8px;
 }
 
-#custom-launcher {
-    font-size: 20px;
-    margin-left: 0;
-    border-radius: 2px 0 0 2px;
+#menu {
+    background-color: alpha(@black, 0.8);
+    padding: 0 8px;
 }
 
-#custom-poweroff,
-#custom-reboot,
-#custom-suspend {
+#custom-launcher, .option label {
+    padding: 8px;
+}
 
+.option label {
+    margin-left: 8px;
+}
+
+.option:first-child label {
+    margin-left: 0;
 }
 
 #workspaces button {

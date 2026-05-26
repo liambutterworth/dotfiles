@@ -7,7 +7,7 @@
     "reload_style_on_change": true,
 
     "modules-left": [
-        "group/power",
+        "group/menu",
         "hyprland/workspaces"
     ],
 
@@ -19,17 +19,18 @@
         "custom/time"
     ],
 
-    "group/power": {
+    "group/menu": {
         "orientation": "horizontal",
 
         "drawer": {
             "click-to-reveal": true,
             "transition-duration": 500,
-            "children-class": "power-option"
+            "children-class": "option"
         },
 
         "modules": [
             "custom/launcher",
+            "custom/divider",
             "custom/poweroff",
             "custom/reboot",
             "custom/suspend"
@@ -40,6 +41,10 @@
         "format": "<span font='16' rise='-2000'>󰣇</span>",
         "cursor": true,
         "tooltip": false
+    },
+
+    "custom/divider": {
+        "format": ":"
     },
 
     "custom/poweroff": {
@@ -77,10 +82,6 @@
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%-I:%M %p'",
         "interval": 1
-    },
-
-    "clock#time": {
-        "format": "<span font='16' rise='-2000'></span> {:%l:%M %p}"
     },
 
     "battery": {

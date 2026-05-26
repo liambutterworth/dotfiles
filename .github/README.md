@@ -21,3 +21,7 @@ Checkout config files
 Stop git from showing untracked files (optional)
 
 `git --git-dir=$HOME/.dotfiles config status.showUntrackedFiles no`
+
+Change shell to fish (optional)
+
+`chsh -s $(which fish)`

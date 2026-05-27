@@ -2,7 +2,7 @@
 
 ## Arch
 
-`hyprland hyprpaper hyprshot waybar rofi ghostty`
+`hyprland hypridle hyprlock hyprpaper hyprshot waybar rofi ghostty`
 
 ## Linux
 

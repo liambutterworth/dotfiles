@@ -106,7 +106,7 @@
     "custom/date": {
         "format": "<span font='16' rise='-2000'></span> {}",
         "exec": "date '+%a %b %d'",
-        "on-click": "date '+%a %b %d' | wl-copy",
+        "on-click": "date '+%m/%d/%Y' | wl-copy",
         "on-click-right": "date '+%Y-%m-%d' | wl-copy",
         "interval": 1
     },

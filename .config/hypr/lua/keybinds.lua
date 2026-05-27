@@ -1,5 +1,7 @@
+hl.bind('SUPER + ESCAPE', hl.dsp.exec_cmd('hyprlock'))
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('ghostty'))
 hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-num-lines'))
+hl.bind('SUPER + BACKSPACE', hl.dsp.focus({ workspace = 'previous' }))
 hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + Q', hl.dsp.window.close())
 hl.bind('SUPER + S', hl.dsp.exec_cmd('hyprshot -m region --clipboard-only'))
@@ -25,7 +27,7 @@ end)
 
 for i = 1, 10 do
     local key = i % 10
-    hl.bind('SUPER + ' .. key, hl.dsp.focus({ workspace = i}))
+    hl.bind('SUPER + ' .. key, hl.dsp.focus({ workspace = i }))
     hl.bind('SUPER + SHIFT + ' .. key, hl.dsp.window.move({ workspace = i }))
 end
 

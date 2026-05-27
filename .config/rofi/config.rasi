@@ -29,6 +29,7 @@ configuration {
 }
 
 window {
+    anchor: north;
     background-color: @background;
     border: 0;
     border-radius: 2px;
@@ -73,7 +74,8 @@ textbox {
 
 listview {
     border: none;
-    lines: 8;
+    dynamic: true;
+    lines: 4;
     require-input: true;
     scrollbar: false;
 }

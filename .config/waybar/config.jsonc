@@ -40,7 +40,7 @@
     },
 
     "custom/launcher": {
-        "format": "<span font='16' rise='-2000'>󰣇</span>",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰣇</span>",
         "cursor": true,
         "tooltip": false
     },
@@ -50,18 +50,18 @@
     },
 
     "custom/poweroff": {
-        "format": "<span font='16' rise='-2000'></span>",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'></span>",
         "on-click": "systemctl poweroff"
     },
 
     "custom/reboot": {
-        "format": "<span font='16' rise='-2000'></span>",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'></span>",
         "on-click": "systemctl reboot"
     },
 
     "custom/suspend": {
-        "format": "<span font='16' rise='-2000'></span>",
-        "on-click": "systemctl suspend"
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'></span>",
+        "on-click": "hyprlock"
     },
 
     "hyprland/workspaces": {
@@ -70,41 +70,41 @@
     },
 
     "cpu": {
-        "format": "<span font='16' rise='-2000'></span> {}%",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
         "on-click": "ghostty -e htop -s PERCENT_CPU",
         "interval": 10
     },
 
     "memory": {
-        "format": "<span font='16' rise='-2000'></span> {}%",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
         "on-click": "ghostty -e htop -s PERCENT_MEM",
         "interval": 10
     },
 
     "battery": {
-        "format": "<span font='16' rise='-2000'>{icon}</span> {capacity}%",
-        "format-icons": ["󰁺", "󰁼", "󰁿", "󰂀", "󰁹"]
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>{icon}</span>{capacity}%",
+        "format-icons": ["󰁺 ", "󰁼 ", "󰁿 ", "󰂀 ", "󰁹 "]
     },
 
     "wireplumber": {
-        "format": "<span font='16' rise='-2000'>󰕾</span> {volume}%",
-        "format-muted": "<span font='16' rise='-2000'>󰖁</span> {volume}%",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰕾 </span>{volume}%",
+        "format-muted": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰖁 </span>{volume}%",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
     "network": {
-        "format": "<span font='16' rise='-2000'>{icon}</span> {ifname}",
-        "format-wifi": "<span font='16' rise='-2000'>{icon}</span> {essid}",
-        "format-ethernet": "<span font='16' rise='-2000'>󰈀</span> {ipaddr}/{cidr}",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>{icon}</span>{ifname}",
+        "format-wifi": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>{icon}</span>{essid}",
+        "format-ethernet": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰈀 </span>{ipaddr}/{cidr}",
         "format-disconnected": "",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
         "max-length": 50
     },
 
     "custom/date": {
-        "format": "<span font='16' rise='-2000'></span> {}",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}",
         "exec": "date '+%a %b %d'",
         "on-click": "date '+%m/%d/%Y' | wl-copy",
         "on-click-right": "date '+%Y-%m-%d' | wl-copy",
@@ -112,7 +112,7 @@
     },
 
     "custom/time": {
-        "format": "<span font='16' rise='-2000'></span> {}",
+        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}",
         "exec": "date '+%-I:%M %p'",
         "on-click": "date '+%-I:%M %p' | wl-copy",
         "on-click-right": "date '+%H:%M' | wl-copy",

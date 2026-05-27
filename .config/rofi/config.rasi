@@ -14,7 +14,7 @@ configuration {
     red: #c4746e;
     white: #c8c093;
     yellow: #c4b28a;
-    bright-black: #a6a69c;
+    bright-black: #727169;
     bright-blue: #7fb4ca;
     bright-cyan: #7aa89f;
     bright-green: #87a987;
@@ -25,13 +25,14 @@ configuration {
     background: #0d0c0ccc;
     background-color: transparent;
     text-color: @bright-white;
-    font: "SauceCodePro Light 16";
+    font: "SauceCodePro Nerd Font 16";
 }
 
 window {
     anchor: north;
     background-color: @background;
-    border: 0;
+    border-width: 1px;
+    border-color: @bright-black;
     border-radius: 2px;
     padding: 24px 24px 12px;
     text-color: @bright-white;
@@ -67,15 +68,17 @@ message {
 }
 
 textbox {
-    font: "SauceCodePro 12";
+    font: "SauceCodePro Nerd Font 12";
     padding: 8px 0 0;
     text-color: @bright-white;
 }
 
 listview {
-    border: none;
+    border: 1px solid 0 0;
+    border-color: @bright-black;
     dynamic: true;
     lines: 4;
+    padding: 16px 0 0;
     require-input: true;
     scrollbar: false;
 }
@@ -105,7 +108,8 @@ element-icon {
 
 element-text {
     background-color: transparent;
-    text-color: @bright-black;
+    text-color: @bright-white;
+    highlight: bold #c4746e;
     vertical-align: 0.5;
 }
 

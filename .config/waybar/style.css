@@ -10,13 +10,13 @@
 @define-color bright-red #e46876;
 @define-color bright-green #87a987;
 @define-color bright-yellow #e6c384;
-@define-color bright-bluw #7fb4ca;
+@define-color bright-blue #7fb4ca;
 @define-color bright-magenta #938aa9;
 @define-color bright-cyan #a3d4d5;
 @define-color bright-white #c5c9c5;
 
 * {
-    font-family: "SauceCodePro Nerd Font Propo";
+    font-family: "SauceCodePro Nerd Font Medium";
     font-size: 16px;
     font-weight: 400;
 }

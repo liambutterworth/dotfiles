@@ -8,6 +8,14 @@ hl.layer_rule({
     },
 })
 
+hl.layer_rule({
+    animation = 'popin 90%',
+
+    match = {
+        namespace = 'rofi',
+    },
+})
+
 hl.window_rule({
     float = true,
     no_blur = true,

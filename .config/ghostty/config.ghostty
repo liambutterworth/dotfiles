@@ -3,6 +3,7 @@ background-opacity = 0.85
 confirm-close-surface = false
 cursor-color = #c5c9c5
 cursor-text = #c7c9c5
+font-family = SauceCodePro Nerd Font Mono
 font-size = 16
 foreground = #c5c9c5
 keybind = ctrl+,=unbind

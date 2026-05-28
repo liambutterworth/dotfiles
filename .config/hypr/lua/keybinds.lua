@@ -1,4 +1,3 @@
-hl.bind('SUPER + ESCAPE', hl.dsp.exec_cmd('hyprlock'))
 hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('ghostty'))
 hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-num-lines'))
 hl.bind('SUPER + BACKSPACE', hl.dsp.focus({ workspace = 'previous' }))
@@ -23,6 +22,11 @@ hl.bind('SUPER + mouse:272', hl.dsp.window.resize(), { mouse = true })
 hl.bind('SUPER + R', function()
     hl.exec_cmd('killall -q hyprpaper && hyprpaper')
     hl.exec_cmd('killall -q waybar && waybar')
+end)
+
+hl.bind('SUPER + ESCAPE', function()
+    hl.dispatch(hl.dsp.exec_cmd('pidof hyprlock || hyprlock'))
+    hl.dispatch(hl.dsp.dpms({ action = 'toggle' }))
 end)
 
 for i = 1, 10 do

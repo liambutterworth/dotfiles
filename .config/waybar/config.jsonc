@@ -61,7 +61,7 @@
 
     "custom/suspend": {
         "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'></span>",
-        "on-click": "hyprlock"
+        "on-click": "systemctl suspend"
     },
 
     "hyprland/workspaces": {

@@ -25,7 +25,7 @@ configuration {
     background: #0d0c0ccc;
     background-color: transparent;
     text-color: @bright-white;
-    font: "SauceCodePro Nerd Font 16";
+    font: "SauceCodePro Nerd Font Medium 16";
 }
 
 window {
@@ -68,7 +68,7 @@ message {
 }
 
 textbox {
-    font: "SauceCodePro Nerd Font 12";
+    font: "SauceCodePro Nerd Font Medium 12";
     padding: 8px 0 0;
     text-color: @bright-white;
 }

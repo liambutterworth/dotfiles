@@ -49,5 +49,12 @@ return {
                 ['*.ghostty'] = 'dosini',
             },
         })
+
+        vim.api.nvim_create_autocmd('FileType', {
+            callback = function(args)
+                local lang = vim.treesitter.language.get_lang(args.match)
+                if lang then pcall(vim.treesitter.start) end
+            end
+        })
     end,
 }

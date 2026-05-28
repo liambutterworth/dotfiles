@@ -3,6 +3,7 @@ hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-n
 hl.bind('SUPER + BACKSPACE', hl.dsp.focus({ workspace = 'previous' }))
 hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + Q', hl.dsp.window.close())
+hl.bind('SUPER + W', hl.dsp.exec_cmd('pkill waybar || waybar'))
 hl.bind('SUPER + S', hl.dsp.exec_cmd('hyprshot -m region --clipboard-only'))
 hl.bind('SUPER + F', hl.dsp.window.fullscreen({ action = 'toggle' }))
 hl.bind('SUPER + H', hl.dsp.focus({ direction = 'left' }))

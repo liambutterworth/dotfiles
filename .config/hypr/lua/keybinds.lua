@@ -3,7 +3,6 @@ hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('rofi -show drun filter "^" -no-fixed-n
 hl.bind('SUPER + BACKSPACE', hl.dsp.focus({ workspace = 'previous' }))
 hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + Q', hl.dsp.window.close())
-hl.bind('SUPER + SHIFT + Q', hl.dsp.exit())
 hl.bind('SUPER + S', hl.dsp.exec_cmd('hyprshot -m region --clipboard-only'))
 hl.bind('SUPER + F', hl.dsp.window.fullscreen({ action = 'toggle' }))
 hl.bind('SUPER + H', hl.dsp.focus({ direction = 'left' }))
@@ -30,10 +29,10 @@ hl.bind('SUPER + ESCAPE', function()
     hl.dispatch(hl.dsp.dpms({ action = 'toggle' }))
 end, { locked = true })
 
-for i = 1, 10 do
-    local key = i % 10
-    hl.bind('SUPER + ' .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind('SUPER + SHIFT + ' .. key, hl.dsp.window.move({ workspace = i }))
+for index = 1, 10 do
+    local key = index % 10
+    hl.bind('SUPER + ' .. key, hl.dsp.focus({ workspace = index }))
+    hl.bind('SUPER + SHIFT + ' .. key, hl.dsp.window.move({ workspace = index }))
 end
 
 hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd('wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+'), { locked = true, repeating = true })

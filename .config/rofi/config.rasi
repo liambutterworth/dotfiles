@@ -25,7 +25,7 @@ configuration {
     background: #0d0c0ccc;
     background-color: transparent;
     text-color: @bright-white;
-    font: "SauceCodePro Nerd Font Medium 16";
+    font: "SauceCodePro Nerd Font Medium 14";
 }
 
 window {
@@ -77,15 +77,16 @@ listview {
     border: 1px solid 0 0;
     border-color: @bright-black;
     dynamic: true;
-    lines: 4;
+    lines: 8;
     padding: 16px 0 0;
     require-input: true;
     scrollbar: false;
 }
 
 element {
-    padding: 4px 8px;
+    padding: 8px;
     spacing: 8px;
+    border-radius: 2px;
 }
 
 element alternate.normal {
@@ -97,19 +98,19 @@ element normal.normal {
 }
 
 element selected.normal {
-    background-color: transparent;
+    background-color: #72716955;
 }
 
 element-icon {
     border: 0;
-    size: 48px;
+    size: 36px;
     vertical-align: 0.5;
 }
 
 element-text {
     background-color: transparent;
-    text-color: @bright-white;
     highlight: bold #c4746e;
+    text-color: @bright-white;
     vertical-align: 0.5;
 }
 

@@ -72,26 +72,30 @@
     "cpu": {
         "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
         "on-click": "ghostty -e htop -s PERCENT_CPU",
-        "interval": 10
+        "interval": 10,
+        "tooltip": false
     },
 
     "memory": {
         "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
         "on-click": "ghostty -e htop -s PERCENT_MEM",
-        "interval": 10
+        "interval": 10,
+        "tooltip": false
     },
 
     "battery": {
         "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>{icon}</span>{capacity}%",
-        "format-icons": ["󰁺 ", "󰁼 ", "󰁿 ", "󰂀 ", "󰁹 "]
+        "format-icons": ["󰁺 ", "󰁼 ", "󰁿 ", "󰂀 ", "󰁹 "],
+        "tooltip": false
     },
 
     "wireplumber": {
         "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰕾 </span>{volume}%",
         "format-muted": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰖁 </span>{volume}%",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        "tooltip": false
     },
 
     "network": {
@@ -100,7 +104,9 @@
         "format-ethernet": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'>󰈀 </span>{ipaddr}/{cidr}",
         "format-disconnected": "",
         "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
-        "max-length": 50
+        "on-click": "curl -s https://ifconfig.me | wl-copy",
+        "max-length": 50,
+        "tooltip": false
     },
 
     "custom/date": {
@@ -108,7 +114,8 @@
         "exec": "date '+%a %b %d'",
         "on-click": "date '+%m/%d/%Y' | wl-copy",
         "on-click-right": "date '+%Y-%m-%d' | wl-copy",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false
     },
 
     "custom/time": {
@@ -116,6 +123,7 @@
         "exec": "date '+%-I:%M %p'",
         "on-click": "date '+%-I:%M %p' | wl-copy",
         "on-click-right": "date '+%H:%M' | wl-copy",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false
     }
 }

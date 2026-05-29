@@ -22,8 +22,12 @@ hl.config({
         },
     },
 
+    dwindle = {
+        preserve_split = true,
+    },
+
     general = {
-        layout = 'master',
+        layout = 'dwindle',
         gaps_in  = 8,
         gaps_out = 8,
         border_size = 1,
@@ -31,6 +35,28 @@ hl.config({
         col = {
             active_border = '#c8c093',
             inactive_border = 'rgba(00000000)',
+        },
+    },
+
+    group = {
+        groupbar = {
+            blur = true,
+            font_size = 16,
+            gaps_in = 4,
+            gradients = true,
+            gradient_rounding = 2,
+            height = 24,
+            indicator_gap = 4,
+            indicator_height = 0,
+            keep_upper_gap = false,
+            render_titles = false,
+
+            col = {
+                active = 'rgba(c5c9c5cc)',
+                inactive = 'rgba(c5c9c588)',
+                locked_active = 'rgba(0d0c0ccc)',
+                locked_inactive = 'rgba(0d0c0c88)',
+            },
         },
     },
 

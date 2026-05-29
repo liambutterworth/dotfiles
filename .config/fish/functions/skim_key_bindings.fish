@@ -1,6 +1,6 @@
 function skim_key_bindings
     function skim-executables
-        set -l binary (fd . /usr/bin /bin -t x -d 1 -x echo '{/}' | sk -e --tac)
+        set -l binary (fd . /usr/bin -t x -d 1 -x echo '{/}' | sk -e --tac)
 
         if test -n "$binary"
             $binary >/dev/null 2>&1 &

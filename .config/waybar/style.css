@@ -25,6 +25,12 @@ window#waybar {
     background-color: transparent;
 }
 
+#menu {
+    background-color: alpha(@black, 0.8);
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
 #workspaces button, .modules-right .module {
     background-color: alpha(@black, 0.8);
     border-radius: 4px;
@@ -32,10 +38,16 @@ window#waybar {
     margin-left: 8px;
 }
 
-#menu {
-    background-color: alpha(@black, 0.8);
-    border-radius: 4px;
-    padding: 0 8px;
+#workspaces button {
+    color: @bright-black;
+}
+
+#workspaces button.active {
+    color: @bright-white;
+}
+
+#workspaces button.urgent {
+    color: @red;
 }
 
 #custom-launcher, .option label {
@@ -48,16 +60,4 @@ window#waybar {
 
 .option:first-child label {
     margin-left: 0;
-}
-
-#workspaces button {
-    color: @bright-black;
-}
-
-#workspaces button.urgent {
-    color: @red;
-}
-
-#workspaces button.active {
-    color: @bright-white;
 }

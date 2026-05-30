@@ -1,4 +1,27 @@
 function skim_key_bindings
+    set -l color (string join ',' \
+        'fg:8' \
+        'bg:-1' \
+        'matched:1' \
+        'matched_bg:-1' \
+        'current:15' \
+        'current_bg:-1' \
+        'current_match:1' \
+        'current_match_bg:-1' \
+        'spinner:2' \
+        'info:2' \
+        'prompt:13' \
+        'cursor:13' \
+        'selected:10' \
+        'header:1' \
+        'border:7'
+    )
+
+    set -lx SKIM_DEFAULT_OPTIONS "--color=$color --prompt='❯ ' --selector='❯'"
+    set -lx SKIM_ALT_C_COMMAND 'fd --color=never --type directory'
+    set -lx SKIM_CTRL_T_COMMAND 'fd --color=never --type file'
+    set -lx SKIM_TMUX_OPTS '80%,80%'
+
     function skim-executables
         set -l executable (fd . /usr/bin -tx -tl -d 1 -x echo '{/}' | sk -e --tac)
 
@@ -14,15 +37,9 @@ function skim_key_bindings
         set -l dir $commandline[1]
         set -l skim_query $commandline[2]
 
-        test -n "$SKIM_CTRL_T_COMMAND"; or set -l SKIM_CTRL_T_COMMAND "
-        command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
-        -o -type f -print \
-        -o -type d -print \
-        -o -type l -print 2> /dev/null | sed 's@^\./@@'"
-
         begin
             set -lx SKIM_DEFAULT_OPTIONS "--reverse $SKIM_DEFAULT_OPTIONS $SKIM_CTRL_T_OPTS"
-            eval "$SKIM_CTRL_T_COMMAND | "(__skimcmd)' -m --query "'$skim_query'"' | while read -l r; set result $result $r; end
+            eval "$SKIM_CTRL_T_COMMAND | "(__skim_command)' -m --query "'$skim_query'"' | while read -l r; set result $result $r; end
         end
 
         if [ -z "$result" ]
@@ -47,10 +64,10 @@ function skim_key_bindings
             set -l FISH_MINOR (echo $version | cut -f2 -d.)
 
             if [ "$FISH_MAJOR" -gt 2 -o \( "$FISH_MAJOR" -eq 2 -a "$FISH_MINOR" -ge 4 \) ];
-                history -z | eval (__skimcmd) --read0 --print0 -q '(commandline)' | read -lz result
+                history -z | eval (__skim_command) --read0 --print0 -q '(commandline)' | read -lz result
                 and commandline -- $result
             else
-                history | eval (__skimcmd) -q '(commandline)' | read -l result
+                history | eval (__skim_command) -q '(commandline)' | read -l result
                 and commandline -- $result
             end
         end
@@ -63,13 +80,9 @@ function skim_key_bindings
         set -l dir $commandline[1]
         set -l skim_query $commandline[2]
 
-        test -n "$SKIM_ALT_C_COMMAND"; or set -l SKIM_ALT_C_COMMAND "
-        command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
-        -o -type d -print 2> /dev/null | sed 's@^\./@@'"
-
         begin
             set -lx SKIM_DEFAULT_OPTIONS "--reverse $SKIM_DEFAULT_OPTIONS $SKIM_ALT_C_OPTS"
-            eval "$SKIM_ALT_C_COMMAND | "(__skimcmd)' --no-multi --query "'$skim_query'"' | read -l result
+            eval "$SKIM_ALT_C_COMMAND | "(__skim_command)' --no-multi --query "'$skim_query'"' | read -l result
 
             if [ -n "$result" ]
                 cd $result
@@ -78,19 +91,6 @@ function skim_key_bindings
         end
 
         commandline -f repaint
-    end
-
-    function __skimcmd
-        test -n "$SKIM_TMUX"; or set SKIM_TMUX 0
-        test -n "$SKIM_TMUX_HEIGHT"; or set SKIM_TMUX_HEIGHT 40%
-
-        if [ -n "$SKIM_TMUX_OPTS" ]
-            echo "sk --tmux=$SKIM_TMUX_OPTS "
-        else if [ $SKIM_TMUX -eq 1 ]
-            echo "sk --tmux=center,$SKIM_TMUX_HEIGHT"
-        else
-            echo "sk"
-        end
     end
 
     bind \ce skim-executables
@@ -103,6 +103,19 @@ function skim_key_bindings
         bind -M insert \ct skim-file-widget
         bind -M insert \cr skim-history-widget
         bind -M insert \cg skim-cd-widget
+    end
+
+    function __skim_command
+        test -n "$SKIM_TMUX"; or set SKIM_TMUX 0
+        test -n "$SKIM_TMUX_HEIGHT"; or set SKIM_TMUX_HEIGHT 40%
+
+        if [ -n "$SKIM_TMUX_OPTS" ]
+            echo "sk --tmux=$SKIM_TMUX_OPTS "
+        else if [ $SKIM_TMUX -eq 1 ]
+            echo "sk --tmux=center,$SKIM_TMUX_HEIGHT"
+        else
+            echo "sk"
+        end
     end
 
     function __skim_parse_commandline -d 'Parse the current command line token and return split of existing filepath and rest of token'

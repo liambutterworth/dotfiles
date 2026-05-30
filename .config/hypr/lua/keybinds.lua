@@ -17,6 +17,7 @@ hl.bind('SUPER + SHIFT + S', hl.dsp.exec_cmd('hyprshot -m ouput --clipboard-only
 hl.bind('SUPER + F', hl.dsp.window.fullscreen({ action = 'toggle' }))
 hl.bind('SUPER + G', hl.dsp.group.toggle())
 hl.bind('SUPER + SHIFT + G', hl.dsp.group.lock())
+hl.bind('SUPER + B', hl.dsp.exec_cmd('zen-browser'))
 hl.bind('SUPER + O', hl.dsp.layout('swapsplit'))
 hl.bind('SUPER + P', hl.dsp.layout('rotatesplit -90'))
 hl.bind('SUPER + H', hl.dsp.focus({ direction = 'left' }))

@@ -1,8 +1,3 @@
-function launch -d "Launch app"
-    argparse 'c/close' -- $argv
-    command $argv & disown
-
-    if set -q _flag_close
-        exit
-    end
+function launch -d "Launch app and exit"
+    command $argv & disown && exit
 end

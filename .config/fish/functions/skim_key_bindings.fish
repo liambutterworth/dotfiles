@@ -1,12 +1,12 @@
 function skim_key_bindings
     function skim-executables
-        set -l binary (fd . /usr/bin -tx -tl -d 1 -x echo '{/}' | sk -e --tac)
+        set -l executable (fd . /usr/bin -tx -tl -d 1 -x echo '{/}' | sk -e --tac)
 
-        if test -n "$binary"
-            $binary >/dev/null 2>&1 &
-            disown
-            exit
+        if test -n "$executable"
+            commandline -i -- $executable
         end
+
+        commandline -f repaint
     end
 
     function skim-file-widget -d "List files and folders"
@@ -93,7 +93,7 @@ function skim_key_bindings
         end
     end
 
-    bind \co skim-executables
+    bind \ce skim-executables
     bind \ct skim-file-widget
     bind \cr skim-history-widget
     bind \cg skim-cd-widget

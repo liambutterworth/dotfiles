@@ -21,7 +21,7 @@
     font-weight: 400;
 }
 
-window#waybar {
+#waybar {
     background-color: transparent;
 }
 

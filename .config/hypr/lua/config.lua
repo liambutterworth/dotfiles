@@ -4,8 +4,8 @@ hl.config({
     },
 
     decoration = {
-        rounding = 4,
-        rounding_power = 2,
+        rounding = 5,
+        rounding_power = 1,
 
         shadow = {
             enabled = true,
@@ -28,9 +28,9 @@ hl.config({
 
     general = {
         layout = 'dwindle',
-        gaps_in  = 8,
+        gaps_in  = 6,
         gaps_out = 8,
-        border_size = 1,
+        border_size = 2,
 
         col = {
             active_border = '#c8c093',

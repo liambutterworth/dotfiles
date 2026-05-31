@@ -32,6 +32,9 @@ hl.bind('SUPER + N', hl.dsp.layout('rotatesplit 90'))
 hl.bind('SUPER + M', hl.dsp.layout('movetoroot'))
 hl.bind('SUPER + mouse:272', hl.dsp.window.drag(), { mouse = true })
 hl.bind('SUPER + mouse:272', hl.dsp.window.resize(), { mouse = true })
+hl.bind('SUPER + BRACKETLEFT', hl.dsp.layout('splitratio -0.1'))
+hl.bind('SUPER + BRACKETRIGHT', hl.dsp.layout('splitratio +0.1'))
+hl.bind('SUPER + BACKSLASH', hl.dsp.layout('splitratio 1 exact'))
 
 for index = 1, 10 do
     local key = index % 10

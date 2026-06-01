@@ -8,16 +8,16 @@ hl.config({
         rounding_power = 1,
 
         shadow = {
+            color = 0xee1a1a1a,
             enabled = true,
             range = 4,
             render_power = 3,
-            color = 0xee1a1a1a,
         },
 
         blur = {
             enabled = true,
-            size = 3,
             passes = 1,
+            size = 3,
             vibrancy = 0.1696,
         },
     },
@@ -27,10 +27,10 @@ hl.config({
     },
 
     general = {
-        layout = 'dwindle',
-        gaps_in  = 6,
-        gaps_out = 8,
         border_size = 2,
+        gaps_in  = 4,
+        gaps_out = 8,
+        layout = 'dwindle',
 
         col = {
             active_border = '#c8c093',

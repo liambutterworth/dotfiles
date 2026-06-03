@@ -6,7 +6,20 @@ cursor-text = #c7c9c5
 font-family = SauceCodePro Nerd Font Mono
 font-size = 16
 foreground = #c5c9c5
-keybind = ctrl+,=unbind
+keybind = clear
+keybind = alt+r=reload_config
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+keybind = alt+q=close_surface
+keybind = alt+s=new_split:down
+keybind = alt+v=new_split:right
+keybind = alt+t=new_tab
+keybind = alt+n=next_tab
+keybind = alt+p=previous_tab
+keybind = alt+shift+n=move_tab:1
+keybind = alt+shift+p=move_tab:-1
 palette = 0=#0d0c0c
 palette = 1=#c4746e
 palette = 2=#8a9a7b

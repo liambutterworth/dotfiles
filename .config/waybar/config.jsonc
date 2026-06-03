@@ -25,9 +25,9 @@
         "orientation": "horizontal",
 
         "drawer": {
+            "children-class": "option",
             "click-to-reveal": true,
-            "transition-duration": 500,
-            "children-class": "option"
+            "transition-duration": 500
         },
 
         "modules": [

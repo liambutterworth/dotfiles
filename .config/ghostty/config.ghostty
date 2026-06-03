@@ -8,6 +8,11 @@ font-size = 16
 foreground = #c5c9c5
 keybind = clear
 keybind = alt+r=reload_config
+keybind = alt+f=start_search
+keybind = alt+g=navigate_search:next
+keybind = alt+shift+g=navigate_search:previous
+keybind = alt+d=scroll_page_fractional:0.5
+keybind = alt+u=scroll_page_fractional:-0.5
 keybind = alt+h=goto_split:left
 keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
@@ -18,6 +23,7 @@ keybind = alt+v=new_split:right
 keybind = alt+t=new_tab
 keybind = alt+n=next_tab
 keybind = alt+p=previous_tab
+keybind = alt+shift+t=prompt_tab_title
 keybind = alt+shift+n=move_tab:1
 keybind = alt+shift+p=move_tab:-1
 keybind = cmd+c=copy_to_clipboard

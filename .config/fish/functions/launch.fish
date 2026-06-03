@@ -1,3 +1,5 @@
 function launch -d "Launch app"
-    command $argv &>/dev/null & disown && exit
+    for app in $argv
+        command $app &>/dev/null & disown
+    end
 end

@@ -1,0 +1,5 @@
+set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
+set -x CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
+set -x GNUPGHOME "$XDG_DATA_HOME/gnupg"
+set -x HISTFILE "$XDG_STATE_HOME/bash/history"
+set -x NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"

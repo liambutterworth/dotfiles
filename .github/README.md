@@ -2,7 +2,8 @@
 
 ## Arch
 
-`hyprland hypridle hyprlock hyprpaper hyprshot waybar ghostty nvidia-open pipewire`
+`hyprland hypridle hyprlock hyprpaper hyprshot waybar ghostty nvidia-open`
+`pipewire pipewire-alsa pipewire-pulse transmission-cli transmission-qt vlc`
 
 ## Linux
 

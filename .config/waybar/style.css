@@ -23,6 +23,7 @@
 
 #waybar {
     background-color: transparent;
+    color: @bright-white;
 }
 
 #menu {

@@ -2,7 +2,7 @@
 
 ## Arch
 
-`hyprland hypridle hyprlock hyprpaper hyprshot waybar ghostty`
+`hyprland hypridle hyprlock hyprpaper hyprshot waybar ghostty nvidia-open pipewire`
 
 ## Linux
 

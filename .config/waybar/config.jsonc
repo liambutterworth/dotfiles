@@ -12,10 +12,10 @@
     ],
 
     "modules-right": [
-        "cpu",
-        "memory",
-        "battery",
+        // "cpu",
+        // "memory",
         "wireplumber",
+        "battery",
         "network",
         "custom/date",
         "custom/time"
@@ -65,6 +65,7 @@
     },
 
     "hyprland/workspaces": {
+        "all-outputs": true,
         "on-click": "activate",
         "cursor": true
     },

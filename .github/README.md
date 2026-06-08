@@ -1,18 +1,20 @@
 # Install
 
-## Linux
+Terminal packages
 
-```
-ghostty fish neovim git fd ripgrep skim
-ttf-sourcecodepro-nerd nvidia-open btop rofi wayber
-hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot
-pipewire pipewire-alsa pipewire-pulse
-transmission-cli transmission-qt vlc
-```
+`ghostty fish neovim git fd ripgrep skim btop ttf-sourcecodepro-nerd`
 
-## Mac
+Desktop packages
 
-`fish neovim git fd rg sk font-sauce-code-pro-nerd-font`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot waybar rofi pipewire`
+
+Application packages
+
+`discord steam obsidian reaper blender krita vlc transmission-qt transmission-cli`
+
+Arch User Repository packages
+
+`zen-browser-bin`
 
 # Config
 
@@ -49,3 +51,13 @@ Add the key
 Copy the key (paste into github)
 
 `cat ~/.ssh/id_ed25519.pub | wl-copy`
+
+# Macbook
+
+Install terminal
+
+`brew install --cask ghostty`
+
+Install dependencies
+
+`fish neovim git fd rg sk font-sauce-code-pro-nerd-font`

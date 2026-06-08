@@ -2,11 +2,11 @@
 
 Terminal packages
 
-`ghostty fish neovim git fd ripgrep skim btop ttf-sourcecodepro-nerd`
+`ghostty fish neovim git fd ripgrep skim termusic ttf-sourcecodepro-nerd`
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot waybar rofi pipewire`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot btop pipewire rofi waybar`
 
 Application packages
 
@@ -56,8 +56,8 @@ Copy the key (paste into github)
 
 Install terminal
 
-`brew install --cask ghostty`
+`brew install --cask ghostty font-sauce-code-pro-nerd-font`
 
 Install dependencies
 
-`fish neovim git fd rg sk font-sauce-code-pro-nerd-font`
+`fish neovim git fd rg sk termusic`

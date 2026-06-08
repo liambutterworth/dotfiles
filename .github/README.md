@@ -1,16 +1,20 @@
 # Install
 
-Terminal packages
+System packages
 
-`ghostty fish neovim git fd ripgrep skim termusic ttf-sourcecodepro-nerd`
+`efibootmgr grub grub-btrfs snapper snap-pac nvidia-open pipewire pipewire-alsa pipewire-pulse`
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot btop pipewire rofi waybar`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot rofi waybar`
+
+Terminal packages
+
+`ghostty fish git neovim node npm fd ripgrep skim ttf-sourcecodepro-nerd`
 
 Application packages
 
-`discord steam obsidian reaper blender krita vlc transmission-qt transmission-cli`
+`discord steam obsidian reaper blender krita vlc transmission-cli transmission-qt`
 
 Arch User Repository packages
 
@@ -52,7 +56,7 @@ Copy the key (paste into github)
 
 `cat ~/.ssh/id_ed25519.pub | wl-copy`
 
-# Macbook
+# Mac
 
 Install terminal
 
@@ -60,4 +64,4 @@ Install terminal
 
 Install dependencies
 
-`fish neovim git fd rg sk termusic`
+`fish neovim git fd rg sk node`

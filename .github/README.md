@@ -6,7 +6,7 @@ System packages
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot rofi waybar`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot dunst rofi waybar`
 
 Terminal packages
 

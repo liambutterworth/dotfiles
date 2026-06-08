@@ -22,8 +22,7 @@ configuration {
     bright-red: #e46876;
     bright-white: #c5c9c5;
     bright-yellow: #e6c384;
-    background: #0d0c0ccc;
-    background-color: transparent;
+    background: #0d0c0cee;
     text-color: @bright-white;
     font: "SauceCodePro Nerd Font Medium 14";
 }
@@ -32,7 +31,7 @@ window {
     anchor: north;
     background-color: @background;
     border-width: 1px;
-    border-color: @bright-black;
+    border-color: @background;
     border-radius: 2px;
     padding: 24px 24px 12px;
     text-color: @bright-white;

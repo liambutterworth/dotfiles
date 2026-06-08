@@ -3,10 +3,11 @@
 ## Linux
 
 ```
-ghostty fish neovim git fd ripgrep skim ttf-sourcecodepro-nerd
-hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot wayber
-nvidia-open pipewire pipewire-alsa pipewire-pulse
-transmission-cli transmission-qt vlc vlc-gui-ncurses
+ghostty fish neovim git fd ripgrep skim
+ttf-sourcecodepro-nerd nvidia-open btop rofi wayber
+hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot
+pipewire pipewire-alsa pipewire-pulse
+transmission-cli transmission-qt vlc
 ```
 
 ## Mac

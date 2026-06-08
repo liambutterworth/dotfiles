@@ -1,0 +1,128 @@
+configuration {
+    display-drun: " ";
+    icon-theme: "Papirus-Dark";
+    modi: "drun,run,window";
+    show-icons: true;
+}
+
+* {
+    black: #0d0c0c;
+    blue: #8ba4b0;
+    cyan: #8ea4a2;
+    green: #8a9a7b;
+    magenta: #a292a3;
+    red: #c4746e;
+    white: #c8c093;
+    yellow: #c4b28a;
+    bright-black: #727169;
+    bright-blue: #7fb4ca;
+    bright-cyan: #7aa89f;
+    bright-green: #87a987;
+    bright-magenta: #938aa9;
+    bright-red: #e46876;
+    bright-white: #c5c9c5;
+    bright-yellow: #e6c384;
+    background: #0d0c0ccc;
+    background-color: transparent;
+    text-color: @bright-white;
+    font: "SauceCodePro Nerd Font Medium 14";
+}
+
+window {
+    anchor: north;
+    background-color: @background;
+    border-width: 1px;
+    border-color: @bright-black;
+    border-radius: 2px;
+    padding: 24px 24px 12px;
+    text-color: @bright-white;
+    width: 512px;
+}
+
+mainbox {
+    spacing: 16px;
+    text-color: @bright-white;
+}
+
+inputbar {
+    children: [prompt, entry];
+    text-color: @bright-white;
+}
+
+prompt {
+    margin: 0 8;
+    text-color: @bright-white;
+    vertical-align: 0.5;
+}
+
+entry {
+    cursor-color: @bright-white;
+    text-color: @bright-white;
+    placeholder: "";
+    vertical-align: 0.5;
+}
+
+message {
+    border: none;
+    text-color: @bright-white;
+}
+
+textbox {
+    font: "SauceCodePro Nerd Font Medium 12";
+    padding: 8px 0 0;
+    text-color: @bright-white;
+}
+
+listview {
+    border: 1px solid 0 0;
+    border-color: @bright-black;
+    dynamic: true;
+    lines: 8;
+    padding: 16px 0 0;
+    require-input: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+    border-radius: 2px;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: #72716955;
+}
+
+element-icon {
+    border: 0;
+    size: 36px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    background-color: transparent;
+    highlight: bold #c4746e;
+    text-color: @bright-white;
+    vertical-align: 0.5;
+}
+
+element-text selected.normal {
+    background-color: transparent;
+    text-color: @bright-white;
+}
+
+mode-switcher {
+    text-color: @bright-white;
+}
+
+mode-switcher button {
+    text-color: @bright-white;
+}

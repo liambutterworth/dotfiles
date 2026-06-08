@@ -1,14 +1,4 @@
 function skim_key_bindings
-    function skim-executables
-        set -l executable (fd . /usr/bin -tx -tl -d 1 -x echo '{/}' | sk -e --tac)
-
-        if test -n "$executable"
-            commandline -i -- $executable
-        end
-
-        commandline -f repaint
-    end
-
     function skim-file-widget -d "List files and folders"
         set -l commandline (__skim_parse_commandline)
         set -l dir $commandline[1]
@@ -93,13 +83,11 @@ function skim_key_bindings
         end
     end
 
-    bind \ce skim-executables
     bind \ct skim-file-widget
     bind \cr skim-history-widget
     bind \cg skim-cd-widget
 
     if bind -M insert > /dev/null 2>&1
-        bind -M insert \ce skim-executables
         bind -M insert \ct skim-file-widget
         bind -M insert \cr skim-history-widget
         bind -M insert \cg skim-cd-widget

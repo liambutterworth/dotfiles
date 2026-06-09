@@ -10,7 +10,7 @@ Desktop packages
 
 Terminal packages
 
-`ghostty fish git neovim fd ripgrep skim viu btop docker docker-compose`
+`ghostty fish git neovim fd ripgrep skim viu docker docker-compose`
 
 Application packages
 

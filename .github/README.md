@@ -6,15 +6,15 @@ System packages
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot btop dunst rofi waybar`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot dunst rofi waybar`
 
 Terminal packages
 
-`ghostty docker fish git neovim npm fd ripgrep skim ttf-sourcecodepro-nerd`
+`ghostty docker fish git neovim fd ripgrep skim ttf-sourcecodepro-nerd`
 
 Application packages
 
-`discord steam obsidian reaper blender mpv-mpris yt-dlp transmission-cli`
+`obsidian reaper blender discord steam obs-studio mpv-mpris yt-dlp transmission-cli`
 
 Arch User Repository packages
 

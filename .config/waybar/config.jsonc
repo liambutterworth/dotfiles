@@ -12,8 +12,6 @@
     ],
 
     "modules-right": [
-        // "cpu",
-        // "memory",
         "wireplumber",
         "battery",
         "network",
@@ -68,20 +66,6 @@
         "all-outputs": true,
         "on-click": "activate",
         "cursor": true
-    },
-
-    "cpu": {
-        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
-        "interval": 10,
-        "on-click": "ghostty -e htop -s PERCENT_CPU",
-        "tooltip": false
-    },
-
-    "memory": {
-        "format": "<span font='SauceCodePro Nerd Font Propo 16' rise='-2000'> </span>{}%",
-        "interval": 10,
-        "on-click": "ghostty -e htop -s PERCENT_MEM",
-        "tooltip": false
     },
 
     "battery": {

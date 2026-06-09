@@ -14,7 +14,7 @@ Terminal packages
 
 Application packages
 
-`discord steam obsidian reaper blender krita mpv-mpris yt-dlp transmission-cli`
+`discord steam obsidian reaper blender mpv-mpris yt-dlp transmission-cli`
 
 Arch User Repository packages
 

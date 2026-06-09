@@ -20,7 +20,7 @@ Arch User Repository packages
 
 `zen-browser-bin`
 
-# Config
+# Clone Config
 
 Clone bare repo config
 
@@ -38,7 +38,7 @@ Change shell to fish (optional)
 
 `chsh -s $(which fish)`
 
-# SSH
+# Setup SSH
 
 Generate the key
 
@@ -55,13 +55,3 @@ Add the key
 Copy the key (paste into github)
 
 `cat ~/.ssh/id_ed25519.pub | wl-copy`
-
-# Mac
-
-Install terminal
-
-`brew install --cask ghostty font-sauce-code-pro-nerd-font`
-
-Install dependencies
-
-`fish neovim git fd rg sk node`

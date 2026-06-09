@@ -6,11 +6,11 @@ System packages
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot dunst rofi waybar`
+`hyprland hypridle hyprlock hyprpaper hyprshot dunst rofi waybar ttf-sourcecodepro-nerd`
 
 Terminal packages
 
-`ghostty docker fish git neovim fd ripgrep skim btop yazi ttf-sourcecodepro-nerd`
+`ghostty fish git neovim fd ripgrep skim viu btop docker docker-compose`
 
 Application packages
 

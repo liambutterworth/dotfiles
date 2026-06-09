@@ -2,19 +2,19 @@
 
 System packages
 
-`efibootmgr limine snapper snap-pac nvidia-open pipewire pipewire-alsa pipewire-pulse`
+`efibootmgr limine snap-pac nvidia-open pipewire-alsa pipewire-jack pipewire-pulse`
 
 Desktop packages
 
-`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot dunst rofi waybar`
+`hyprland hypridle hyprlock hyprpaper hyprpicker hyprshot btop dunst rofi waybar`
 
 Terminal packages
 
-`ghostty fish git neovim node npm fd ripgrep skim ttf-sourcecodepro-nerd`
+`ghostty docker fish git neovim npm fd ripgrep skim ttf-sourcecodepro-nerd`
 
 Application packages
 
-`discord steam obsidian reaper blender krita vlc transmission-cli transmission-qt`
+`discord steam obsidian reaper blender krita mpv-mpris yt-dlp transmission-cli`
 
 Arch User Repository packages
 

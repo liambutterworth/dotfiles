@@ -1,5 +1,6 @@
 background = #0d0c0c
 background-opacity = 0.85
+background-opacity-cells = true
 confirm-close-surface = false
 cursor-color = #c5c9c5
 cursor-text = #c7c9c5

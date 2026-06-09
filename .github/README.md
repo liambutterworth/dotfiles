@@ -2,7 +2,7 @@
 
 System packages
 
-`efibootmgr grub grub-btrfs snapper snap-pac nvidia-open pipewire pipewire-alsa pipewire-pulse`
+`efibootmgr limine snapper snap-pac nvidia-open pipewire pipewire-alsa pipewire-pulse`
 
 Desktop packages
 

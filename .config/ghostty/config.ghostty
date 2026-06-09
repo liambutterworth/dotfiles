@@ -27,10 +27,10 @@ keybind = alt+p=previous_tab
 keybind = alt+shift+t=prompt_tab_title
 keybind = alt+shift+n=move_tab:1
 keybind = alt+shift+p=move_tab:-1
-keybind = cmd+c=copy_to_clipboard
-keybind = cmd+v=paste_from_clipboard
-keybind = cmd+==increase_font_size:1.5
-keybind = cmd+-=decrease_font_size:1.5
+keybind = alt+c=copy_to_clipboard
+keybind = alt+v=paste_from_clipboard
+keybind = alt+==increase_font_size:1.5
+keybind = alt+-=decrease_font_size:1.5
 palette = 0=#0d0c0c
 palette = 1=#c4746e
 palette = 2=#8a9a7b

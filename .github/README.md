@@ -1,4 +1,6 @@
-# Install Packages
+# Installation
+
+## Install Packages
 
 System packages
 
@@ -20,7 +22,7 @@ Arch User Repository packages
 
 `zen-browser-bin`
 
-# Clone Config
+## Clone Config
 
 Clone bare repo config
 
@@ -38,7 +40,7 @@ Change shell to fish (optional)
 
 `chsh -s $(which fish)`
 
-# Setup SSH
+## Setup SSH
 
 Generate the key
 

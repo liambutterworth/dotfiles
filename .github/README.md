@@ -10,7 +10,7 @@ Desktop packages
 
 Terminal packages
 
-`ghostty docker fish git neovim fd ripgrep skim ttf-sourcecodepro-nerd`
+`ghostty docker fish git neovim fd ripgrep skim btop yazi ttf-sourcecodepro-nerd`
 
 Application packages
 

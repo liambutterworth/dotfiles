@@ -3,7 +3,7 @@ hl.bind('SUPER + ESCAPE', function()
     hl.dispatch(hl.dsp.dpms({ action = 'toggle' }))
 end, { locked = true })
 
-hl.bind('SUPER + RETURN', hl.dsp.exec_cmd('ghostty'))
+hl.bind('SUPER + SPACE', hl.dsp.exec_cmd('ghostty'))
 hl.bind('SUPER + BACKSPACE', hl.dsp.focus({ workspace = 'previous' }))
 hl.bind('SUPER + TAB', hl.dsp.focus({ last = true }))
 hl.bind('SUPER + Q', hl.dsp.window.close())
@@ -19,7 +19,6 @@ hl.bind('SUPER + SHIFT + S', hl.dsp.exec_cmd('hyprshot -m ouput --clipboard-only
 hl.bind('SUPER + F', hl.dsp.window.fullscreen({ action = 'toggle' }))
 hl.bind('SUPER + G', hl.dsp.group.toggle())
 hl.bind('SUPER + SHIFT + G', hl.dsp.group.lock())
-hl.bind('SUPER + B', hl.dsp.exec_cmd('ghostty -e "btop"'))
 hl.bind('SUPER + O', hl.dsp.layout('swapsplit'))
 hl.bind('SUPER + P', hl.dsp.layout('rotatesplit -90'))
 hl.bind('SUPER + H', hl.dsp.focus({ direction = 'left' }))
@@ -36,7 +35,7 @@ hl.bind('SUPER + BRACKETLEFT', hl.dsp.layout('splitratio -0.1'))
 hl.bind('SUPER + BRACKETRIGHT', hl.dsp.layout('splitratio +0.1'))
 hl.bind('SUPER + BACKSLASH', hl.dsp.layout('splitratio 1 exact'))
 hl.bind('SUPER + mouse:272', hl.dsp.window.drag(), { mouse = true })
-hl.bind('SUPER + SHIFT + mouse:272', hl.dsp.window.resize(), { mouse = true })
+hl.bind('SUPER + mouse:273', hl.dsp.window.resize(), { mouse = true })
 
 for index = 1, 10 do
     local key = index % 10

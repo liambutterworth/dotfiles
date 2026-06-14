@@ -1,8 +1,6 @@
 configuration {
     display-drun: " ";
-    icon-theme: "Papirus-Dark";
-    kb-accept-entry: "";
-    kb-custom-1: "Return";
+    kb-accept-custom: "";
     modi: "drun,run,window";
     show-icons: true;
 }

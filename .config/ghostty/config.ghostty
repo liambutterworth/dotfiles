@@ -8,10 +8,10 @@ font-family = SauceCodePro Nerd Font Mono
 font-size = 16
 foreground = #c5c9c5
 keybind = clear
-keybind = home=scroll_to_top
-keybind = end=scroll_to_bottom
-keybind = page_up=scroll_page_up
-keybind = page_down=scroll_page_down
+keybind = unconsumed:home=scroll_to_top
+keybind = unconsumed:end=scroll_to_bottom
+keybind = unconsumed:page_up=scroll_page_up
+keybind = unconsumed:page_down=scroll_page_down
 keybind = alt+/=start_search
 keybind = alt+.=navigate_search:next
 keybind = alt+,=navigate_search:previous
@@ -40,6 +40,8 @@ keybind = cmd+-=decrease_font_size:1.5
 keybind = cmd+==increase_font_size:1.5
 keybind = cmd+f=toggle_fullscreen
 keybind = cmd+m=toggle_maximize
+keybind = cmd+c=copy_to_clipboard
+keybind = cmd+v=paste_from_clipboard
 palette = 0=#0d0c0c
 palette = 1=#c4746e
 palette = 2=#8a9a7b

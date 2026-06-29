@@ -51,7 +51,15 @@ return {
         })
 
         vim.api.nvim_create_autocmd('FileType', {
+            pattern = '*',
+
             callback = function()
+                local excluded = {'json'}
+
+                if vim.tbl_contains(excluded, vim.bo.filetype) then
+                    return
+                end
+
                 pcall(vim.treesitter.start)
                 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
             end

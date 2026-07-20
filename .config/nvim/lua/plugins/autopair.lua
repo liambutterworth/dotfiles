@@ -11,6 +11,10 @@ return {
             disable_filetype = { 'TelescopePrompt' },
             disable_in_macro = true,
             map_cr = true,
+
+            ts_config = {
+                php = false,
+            },
         })
 
         require('nvim-ts-autotag').setup({

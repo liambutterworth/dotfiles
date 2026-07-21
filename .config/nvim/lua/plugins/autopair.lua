@@ -6,18 +6,19 @@ return {
     },
 
     config = function()
-        require('nvim-autopairs').setup({
+        local autopairs = require('nvim-autopairs')
+        local autotag = require('nvim-ts-autotag')
+        local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+        local cmp = require('cmp')
+
+        autopairs.setup({
             check_ts = true,
             disable_filetype = { 'TelescopePrompt' },
             disable_in_macro = true,
             map_cr = true,
-
-            ts_config = {
-                php = false,
-            },
         })
 
-        require('nvim-ts-autotag').setup({
+        autotag.setup({
             opts = {
                 enable_close_on_slash = true,
             },
@@ -30,6 +31,7 @@ return {
             }
         })
 
+        cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
         vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
         vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
         vim.keymap.set('i', '<c-e>/', '<space><esc>m`A /><esc>``s')

@@ -33,7 +33,10 @@ return {
 
         cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
         vim.keymap.set('i', '<c-e>,', '<space><esc>m`A,<esc>``s')
+        vim.keymap.set('i', '<c-e><c-,>', '<space><esc>m`A,<esc>``s')
         vim.keymap.set('i', '<c-e>;', '<space><esc>m`A;<esc>``s')
+        vim.keymap.set('i', '<c-e><c-;>', '<space><esc>m`A;<esc>``s')
         vim.keymap.set('i', '<c-e>/', '<space><esc>m`A /><esc>``s')
+        vim.keymap.set('i', '<c-e><c-/>', '<space><esc>m`A /><esc>``s')
     end,
 }

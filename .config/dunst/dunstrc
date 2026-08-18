@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = none
-    width = 348
+    width = 512
     height = (0, 256)
     origin = top-right
     offset = (16, 16)
@@ -11,7 +11,7 @@
     progress_bar_height = 8
     progress_bar_frame_width = 1
     progress_bar_min_width = 128
-    progress_bar_max_width = 348
+    progress_bar_max_width = 512
     progress_bar_corner_radius = 2
     progress_bar_corners = all
     icon_corner_radius = 2

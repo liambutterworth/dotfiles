@@ -17,12 +17,24 @@ hl.layer_rule({
 })
 
 hl.window_rule({
+    match = {
+        title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$",
+    },
+
     float = true,
     no_blur = true,
     no_shadow = true,
     pin = true,
+})
 
+hl.window_rule({ -- hide battle.net empty system tray
     match = {
-        title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$",
+        xwayland = true,
+        title = '^$',
+        initial_title = '^$',
     },
+
+    opacity = '0.0 override 0.0 override',
+    float = true,
+    no_blur = true,
 })

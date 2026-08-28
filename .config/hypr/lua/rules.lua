@@ -21,6 +21,7 @@ hl.window_rule({
         title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$",
     },
 
+    keep_aspect_ratio = true,
     float = true,
     no_blur = true,
     no_shadow = true,

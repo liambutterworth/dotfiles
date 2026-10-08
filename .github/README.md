@@ -1,26 +1,8 @@
-# Install Packages
+# Install Dotfiles
 
-System packages
+Install dependencies
 
-`efibootmgr limine snap-pac nvidia-open pipewire-alsa pipewire-jack pipewire-pulse`
-
-Desktop packages
-
-`hyprland hypridle hyprlock hyprpaper hyprshot dunst rofi waybar ttf-sourcecodepro-nerd`
-
-Terminal packages
-
-`ghostty fish git neovim fd ripgrep skim viu docker docker-compose`
-
-Application packages
-
-`obsidian reaper blender discord steam obs-studio mpv-mpris yt-dlp transmission-cli`
-
-Arch User Repository packages
-
-`zen-browser-bin`
-
-# Clone Config
+`ghostty fish git neovim nodejs npm fd ripgrep skim docker docker-compose`
 
 Clone bare repo config
 

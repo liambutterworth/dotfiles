@@ -60,6 +60,8 @@ palette = 14=#a3d4d5
 palette = 15=#c5c9c5
 selection-background = #c5c9c5
 selection-foreground = #0d0c0c
+window-width = 120
+window-height = 40
 window-padding-x = 8
 window-padding-y = 8
 window-padding-balance = true

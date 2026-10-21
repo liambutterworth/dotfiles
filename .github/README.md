@@ -2,7 +2,7 @@
 
 Install dependencies
 
-`ghostty fish git neovim nodejs npm exa fd ripgrep skim docker docker-compose`
+`ghostty fish git neovim fd ripgrep skim nodejs npm docker docker-compose`
 
 Clone bare repo config
 
@@ -18,7 +18,7 @@ Stop git from showing untracked files (optional)
 
 Change shell to fish (optional)
 
-`chsh -s $(which fish)`
+`chsh -s (which fish)`
 
 # Setup SSH
 

@@ -2,7 +2,7 @@
 
 Install dependencies
 
-`ghostty fish git neovim fd ripgrep skim nodejs npm docker docker-compose`
+`ghostty fish git neovim nodejs npm fd ripgrep skim docker docker-compose`
 
 Clone bare repo config
 

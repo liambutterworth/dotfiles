@@ -41,3 +41,7 @@ Copy the key (paste into github)
 Verify authentication
 
 `ssh -T git@github.com`
+
+Set remote to use ssh instead of https
+
+`dot remote set-url origin git@github.com:liambutterworth/dotfiles.git`

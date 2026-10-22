@@ -24,7 +24,7 @@ Change shell to fish (optional)
 
 Generate the key
 
-`ssh-keygen -t ed25519`
+`ssh-keygen -t ed25519 -C "your@email.com"`
 
 Start the agent
 
@@ -37,3 +37,7 @@ Add the key
 Copy the key (paste into github)
 
 `cat ~/.ssh/id_ed25519.pub | wl-copy`
+
+Verify authentication
+
+`ssh -T git@github.com`

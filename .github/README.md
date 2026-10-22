@@ -24,11 +24,11 @@ Change shell to fish (optional)
 
 Generate the key
 
-`ssh-keygen -t ed25519 -c 'my@email.com'`
+`ssh-keygen -t ed25519`
 
 Start the agent
 
-`eval (ssh-agent -s)`
+`eval (ssh-agent -c)`
 
 Add the key
 

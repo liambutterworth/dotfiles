@@ -12,16 +12,17 @@ gaps.outer.top = 16
 gaps.outer.right = 16
 
 [mode.main.binding]
-    alt-minus = 'resize smart -50'
-    alt-equal = 'resize smart +50'
     alt-period = 'layout accordion horizontal vertical'
     alt-slash = 'layout tiles horizontal vertical'
     alt-space = 'exec-and-forget open -n -a Ghostty'
     alt-backspace = 'workspace-back-and-forth'
+    alt-tab = 'workspace-back-and-forth'
     alt-comma = 'focus-monitor left'
     alt-semicolon = 'focus-monitor right'
     alt-shift-comma = ['move-node-to-monitor left', 'focus-monitor left']
     alt-shift-semicolon = ['move-node-to-monitor right', 'focus-monitor right']
+    alt-i = 'resize smart -50'
+    alt-o = 'resize smart +50'
     alt-h = 'focus left'
     alt-j = 'focus down'
     alt-k = 'focus up'
@@ -52,3 +53,7 @@ gaps.outer.right = 16
     alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
     alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
     alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['layout floating']
